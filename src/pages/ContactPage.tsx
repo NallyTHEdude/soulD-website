@@ -125,20 +125,7 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
               </div>
             </div>
 
-            {/* Instant Quote CTA box */}
-            <div className="bg-gradient-to-br from-indigo-900 to-slate-900 text-white p-6 rounded-2xl shadow-xl">
-              <h3 className="text-lg font-bold mb-2">Need an Instant Custom Estimate?</h3>
-              <p className="text-xs text-indigo-200 mb-4 leading-relaxed">
-                Use our interactive proposal calculator to select services and get an instant quote estimate.
-              </p>
-              <button
-                type="button"
-                onClick={onOpenQuote}
-                className="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-xl shadow-md transition-all cursor-pointer"
-              >
-                Launch Proposal Estimator
-              </button>
-            </div>
+            
           </div>
 
           {/* Right Form Column */}

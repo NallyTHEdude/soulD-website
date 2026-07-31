@@ -3,6 +3,7 @@ export interface Service {
   title: string;
   description: string;
   icon: string;
+  image: string; // <-- Add this
   features: string[];
 }
 
@@ -15,7 +16,7 @@ export interface ReviewMetric {
   platform: string;
   rating: string;
   reviewsCount: string;
-  icon: 'google' | 'facebook' | 'location' | 'star';
+  icon: "google" | "facebook" | "location" | "star";
 }
 
 export interface QuoteFormData {

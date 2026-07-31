@@ -216,17 +216,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               </div>
             </div>
 
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={onOpenQuote}
-                className="w-full bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-semibold text-xs py-3 px-4 rounded-xl transition-all shadow-md shadow-indigo-600/20 flex items-center justify-center gap-2 cursor-pointer"
-              >
-                <ShieldCheck className="w-4 h-4" />
-                <span>Request Project Proposal</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
-            </div>
+            
           </div>
         </div>
 

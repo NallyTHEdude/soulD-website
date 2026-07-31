@@ -1,5 +1,36 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Raleway";
+  src: url("./assets/fonts/Raleway/Raleway.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("./assets/fonts/Quicksand/Quicksand.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Quicksand", sans-serif;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);

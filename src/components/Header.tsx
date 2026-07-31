@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
-import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
-import souldLogo from '../../assets/sould-logo.png';
+import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import souldLogo from "../../assets/sould-logo.png";
 
 interface HeaderProps {
   onOpenQuote: () => void;
@@ -9,14 +9,18 @@ interface HeaderProps {
   onSelectService?: (serviceId: string) => void;
 }
 
-export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: HeaderProps) {
+export default function Header({
+  onOpenQuote,
+  onOpenSearch,
+  onSelectService,
+}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
-  const isHomePage = location.pathname === '/';
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,42 +30,44 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
         setIsScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const servicesList = [
-    { id: 'web-dev', name: 'Website Development' },
-    { id: 'app-dev', name: 'Mobile App Development' },
-    { id: 'content-creation', name: 'Content Creation' },
-    { id: 'video-production', name: 'Video Production & Editing' },
-    { id: 'smm', name: 'Social Media Management' },
-    { id: 'ads', name: 'Google Ads & Meta Ads' },
-    { id: 'personal-branding', name: 'Portfolio for Personal Branding' },
-    { id: 'product-branding', name: 'Branding Products or Services' },
+    { id: "web-dev", name: "Website Development" },
+    { id: "app-dev", name: "Mobile App Development" },
+    { id: "content-creation", name: "Content Creation" },
+    { id: "video-production", name: "Video Production & Editing" },
+    { id: "smm", name: "Social Media Management" },
+    { id: "ads", name: "Google Ads & Meta Ads" },
+    { id: "personal-branding", name: "Portfolio for Personal Branding" },
+    { id: "product-branding", name: "Branding Products or Services" },
   ];
 
   const handleServiceClick = (serviceId: string) => {
     if (onSelectService) onSelectService(serviceId);
     setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
-    navigate('/services');
+    navigate("/services");
   };
 
   const navItemClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors py-1 ${
-      isActive ? 'text-indigo-400 font-bold border-b-2 border-indigo-400' : 'text-slate-200 hover:text-indigo-400'
+      isActive
+        ? "text-[#0555F0] font-bold"
+        : "text-slate-200 hover:text-[#0555F0]"
     }`;
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled || !isHomePage
-          ? 'bg-slate-950/90 backdrop-blur-md py-3 shadow-lg border-b border-white/10'
-          : 'bg-transparent py-5'
+          ? "bg-slate-950/90 backdrop-blur-md py-3 shadow-lg border-b border-white/10"
+          : "bg-transparent py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link
@@ -72,12 +78,12 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
             <img
               src={souldLogo}
               alt="Soul-D."
-              className="h-11 sm:h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-102"
+              className="h-11 sm:h-17 w-auto object-contain rounded-lg transition-transform group-hover:scale-102"
             />
           </Link>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <nav className="hidden md:flex items-center space-x-8 text-lg font-medium">
             <NavLink to="/" end className={navItemClass}>
               Home
             </NavLink>
@@ -92,7 +98,9 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
                 to="/services"
                 className={({ isActive }) =>
                   `flex items-center gap-1.5 transition-colors py-2 cursor-pointer ${
-                    isActive ? 'text-indigo-400 font-bold' : 'text-slate-200 hover:text-indigo-400'
+                    isActive
+                      ? "text-[#0555F0] font-bold"
+                      : "text-slate-200 hover:text-[#0555F0]"
                   }`
                 }
               >
@@ -134,12 +142,11 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
 
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-4">
-
             {/* Get a Free Quote Button */}
             <button
               type="button"
               onClick={onOpenQuote}
-              className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="bg-[#0555F0] hover:bg-[#0444C0] text-white font-semibold text-sm px-5 py-2.5 rounded-4xl transition-all shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               Get a Free Quote
             </button>
@@ -152,7 +159,11 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 text-slate-300 hover:text-white rounded-lg cursor-pointer"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -165,15 +176,15 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
             <Link
               to="/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`py-1 ${location.pathname === '/' ? 'text-indigo-400 font-bold' : 'hover:text-indigo-400'}`}
+              className={`py-1 ${location.pathname === "/" ? "text-[#0555F0] font-bold" : "hover:text-[#0555F0]"}`}
             >
               Home
             </Link>
-            
+
             <Link
               to="/services"
               onClick={() => setMobileMenuOpen(false)}
-              className={`py-1 ${location.pathname === '/services' ? 'text-indigo-400 font-bold' : 'hover:text-indigo-400'}`}
+              className={`py-1 ${location.pathname === "/services" ? "text-[#0555F0] font-bold" : "hover:text-[#0555F0]"}`}
             >
               Services
             </Link>
@@ -181,7 +192,7 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
             <Link
               to="/work"
               onClick={() => setMobileMenuOpen(false)}
-              className={`py-1 ${location.pathname === '/work' ? 'text-indigo-400 font-bold' : 'hover:text-indigo-400'}`}
+              className={`py-1 ${location.pathname === "/work" ? "text-[#0555F0] font-bold" : "hover:text-[#0555F0]"}`}
             >
               Our Work
             </Link>
@@ -189,7 +200,7 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
             <Link
               to="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className={`py-1 ${location.pathname === '/about' ? 'text-indigo-400 font-bold' : 'hover:text-indigo-400'}`}
+              className={`py-1 ${location.pathname === "/about" ? "text-[#0555F0] font-bold" : "hover:text-[#0555F0]"}`}
             >
               About
             </Link>
@@ -197,7 +208,7 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className={`py-1 ${location.pathname === '/contact' ? 'text-indigo-400 font-bold' : 'hover:text-indigo-400'}`}
+              className={`py-1 ${location.pathname === "/contact" ? "text-[#0555F0] font-bold" : "hover:text-[#0555F0]"}`}
             >
               Contact
             </Link>
@@ -209,7 +220,7 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
                   setMobileMenuOpen(false);
                   onOpenQuote();
                 }}
-                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-lg text-center transition-colors shadow-lg cursor-pointer"
+                className="w-full bg-[#0555F0] hover:bg-[#0444C0] text-white font-semibold py-3 rounded-lg text-center transition-colors shadow-sm cursor-pointer"
               >
                 Get a Free Quote
               </button>

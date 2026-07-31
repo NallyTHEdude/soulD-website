@@ -4,6 +4,7 @@ import WhatWeDoSection from '../components/WhatWeDoSection';
 import ServicesSection from '../components/ServicesSection';
 import AwardsAndReviews from '../components/AwardsAndReviews';
 import CustomProposalSection from '../components/CustomProposalSection';
+import InteractiveServicesSection from '../components/ui/InteractiveServices';
 
 interface HomePageProps {
   onOpenQuote: () => void;

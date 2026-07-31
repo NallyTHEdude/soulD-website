@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
-import { Search, ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
-import SoulDLogo from './SoulDLogo';
+import { ChevronDown, Menu, X, ArrowRight } from 'lucide-react';
+import souldLogo from '../../assets/sould-logo.png';
 
 interface HeaderProps {
   onOpenQuote: () => void;
@@ -16,6 +16,7 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
 
   const navigate = useNavigate();
   const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +56,7 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+        isScrolled || !isHomePage
           ? 'bg-slate-950/90 backdrop-blur-md py-3 shadow-lg border-b border-white/10'
           : 'bg-transparent py-5'
       }`}
@@ -66,8 +67,13 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
           <Link
             to="/"
             className="flex items-center group transition-transform hover:opacity-95"
+            aria-label="Soul-D. home"
           >
-            <SoulDLogo size={42} variant="full" subtextColor="text-indigo-200" className="group-hover:scale-102 transition-transform drop-shadow-md" />
+            <img
+              src={souldLogo}
+              alt="Soul-D."
+              className="h-11 sm:h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-102"
+            />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -128,21 +134,12 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
 
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-4">
-            {/* Search Button */}
-            <button
-              type="button"
-              onClick={onOpenSearch}
-              aria-label="Search"
-              className="p-2 text-slate-300 hover:text-white hover:bg-white/10 rounded-full transition-colors cursor-pointer"
-            >
-              <Search className="w-4 h-4" />
-            </button>
 
             {/* Get a Free Quote Button */}
             <button
               type="button"
               onClick={onOpenQuote}
-              className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-all shadow-lg shadow-indigo-600/30 hover:shadow-indigo-600/50 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               Get a Free Quote
             </button>
@@ -150,13 +147,6 @@ export default function Header({ onOpenQuote, onOpenSearch, onSelectService }: H
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center gap-2">
-            <button
-              type="button"
-              onClick={onOpenSearch}
-              className="p-2 text-slate-300 hover:text-white rounded-lg cursor-pointer"
-            >
-              <Search className="w-5 h-5" />
-            </button>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}

@@ -160,28 +160,6 @@ export default function AwardsAndReviews() {
         </div>
       </div>
 
-      {/* Solid Royal Blue Bottom CTA Section */}
-      <div className="mt-16 bg-gradient-to-r from-indigo-700 via-indigo-600 to-indigo-800 py-20 text-white relative z-10 overflow-hidden">
-        {/* Subtle Mesh Ambient */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.12),transparent_50%)]" />
-
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-2 relative z-10">
-          <h3 className="text-3xl sm:text-5xl font-extrabold mb-5 tracking-tight font-['Plus_Jakarta_Sans'] leading-tight">
-            Ready to Accelerate Your Revenue & Market Share?
-          </h3>
-          <p className="text-indigo-100 max-w-2xl mx-auto text-base sm:text-lg mb-10 font-normal leading-relaxed">
-            Book a complimentary 30-minute growth strategy session with our lead marketing architects.
-          </p>
-
-          <a
-            href="#about"
-            className="inline-flex items-center gap-3 bg-white text-indigo-700 hover:bg-slate-50 font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-indigo-900/30 transition-all duration-200 hover:-translate-y-0.5"
-          >
-            <span>Schedule Strategy Call</span>
-            <TrendingUp className="w-5 h-5 text-indigo-600" />
-          </a>
-        </div>
-      </div>
     </section>
   );
 }

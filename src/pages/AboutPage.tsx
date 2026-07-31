@@ -57,15 +57,11 @@ export default function AboutPage({ onOpenQuote }: AboutPageProps) {
   ];
 
   return (
-    <div className="pt-24 bg-slate-50 min-h-screen text-slate-900">
+    <div className="bg-slate-50 min-h-screen text-slate-900">
       {/* Hero Header */}
-      <section className="bg-slate-950 text-white py-20 lg:py-28 relative overflow-hidden">
+      <section className="bg-slate-950 text-white pt-36 pb-20 lg:pt-40 lg:pb-28 relative overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500 via-slate-900 to-black pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-bold tracking-widest uppercase mb-6">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>About Soul-D.</span>
-          </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 font-['Plus_Jakarta_Sans']">
             Driven by Passion, <br className="hidden sm:inline" />
             <span className="text-indigo-400">Engineered for Results</span>

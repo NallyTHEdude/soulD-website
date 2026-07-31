@@ -3,6 +3,7 @@ import HubspotSection from '../components/HubspotSection';
 import WhatWeDoSection from '../components/WhatWeDoSection';
 import ServicesSection from '../components/ServicesSection';
 import AwardsAndReviews from '../components/AwardsAndReviews';
+import CustomProposalSection from '../components/CustomProposalSection';
 
 interface HomePageProps {
   onOpenQuote: () => void;
@@ -36,6 +37,9 @@ export default function HomePage({
 
       {/* Relation & Awards + Reviews Section */}
       <AwardsAndReviews />
+
+      {/* Custom Proposal Section */}
+      <CustomProposalSection />
     </>
   );
 }

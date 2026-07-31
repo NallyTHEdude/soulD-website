@@ -98,7 +98,7 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
             <button
               type="button"
               onClick={onOpenQuote}
-              className="bg-[#3B52F6] hover:bg-blue-700 text-white font-semibold text-base px-7 py-3.5 rounded-lg shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/50 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
+              className="bg-[#3B52F6] hover:bg-blue-700 text-white font-semibold text-base px-7 py-3.5 rounded-lg  shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/50 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0"
             >
               Get a Free Quote
             </button>

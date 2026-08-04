@@ -1,18 +1,18 @@
-import { useState } from "react";
 import {
+  CheckCircle2,
   ChevronLeft,
   ChevronRight,
   Globe,
-  Smartphone,
-  PenTool,
-  Video,
   Megaphone,
   Network,
-  UserCheck,
-  Sparkles,
+  PenTool,
   ShieldCheck,
-  CheckCircle2,
+  Smartphone,
+  Sparkles,
+  UserCheck,
+  Video,
 } from "lucide-react";
+import { useState } from "react";
 import { SERVICES_DATA } from "../../data";
 import { Service } from "../../types";
 

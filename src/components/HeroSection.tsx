@@ -18,7 +18,7 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden"
+      className="relative flex items-center pt-28 pb-20 overflow-hidden"
     >
       {/* Fixed Background Image for Parallax Scroll Effect */}
       <div className="fixed inset-0 z-0 pointer-events-none">
@@ -53,31 +53,35 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
         />
 
         {/* Crisp thin accent line (starts at 55% bottom-right going up to 75% top-right) */}
-        <div
+        {/* <div
           className="absolute inset-0 pointer-events-none opacity-50"
           style={{
             clipPath: "polygon(74.9% 0, 75.1% 0, 55.1% 100%, 54.9% 100%)",
             background: "rgba(255,255,255,0.85)",
           }}
-        />
+        /> */}
       </div>
 
       {/* Hero Content Container */}
       <div className="justify-center relative max-w-full mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 sm:pt-16">
-        <div className="max-w-6xl mx-auto text-center ">
+        <div className="max-w-10xl mx-auto text-center ">
           {/* Heading */}
-          <h1 className="text-4xl sm:text-[65px] leading-[70px] font-extrabold text-white tracking-tight mb-4">
-            Elevate Your Brand With <span className="inline-flex text-[#0555F0]">Digital Marketing Solutions</span>
+          <h1 className="text-7xl sm:text-[76px] leading-[85px] font-extrabold text-white tracking-tight mb-4">
+            {" "}
+            Elevate Your Brand with Soul-D
+          </h1>
+          <h1 className="text-7xl sm:text-[65px] leading-[70px] font-extrabold text-white tracking-tight mb-4">
+            The Best{" "}
+            <span className="inline-flex text-[#0555F0]">
+              Digital Marketing Solutions
+            </span>
+            <br />
+            in Hyderabad
           </h1>
 
-          {/* Paragraph */}
-          <p className="text-slate-300 text-base sm:text-lg lg:text-xl font-normal leading-relaxed mb-10 max-w-full mx-auto">
-            {/* {HERO_DATA.description} */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui commodi sed veniam, magni animi dolorem perferendis officiis asperiores provident maiores sapiente quod in hic tenetur consectetur nostrum ut porro, repellat enim at iste rem. Repudiandae fugit, beatae ad consequatur, autem eaque perspiciatis quo enim veniam nobis dolorum, quia corporis consectetur?
-          </p>
 
           {/* Action Buttons */}
-          <div className="flex flex-wrap justify-center items-center gap-6 mb-12">
+          <div className="flex flex-wrap justify-center items-center gap-6 mb-12 mt-25">
             <button
               type="button"
               onClick={onOpenQuote}
@@ -95,7 +99,6 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-200" />
             </button>
           </div>
-
         </div>
       </div>
     </section>

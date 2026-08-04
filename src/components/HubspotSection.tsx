@@ -1,19 +1,33 @@
-import { HUBSPOT_DATA } from '../data';
-import { Sparkles, Layers, CheckCircle2, ArrowRight } from 'lucide-react';
+import { HUBSPOT_DATA } from "../data";
+import { Sparkles, Layers, CheckCircle2, ArrowRight } from "lucide-react";
 
 interface HubspotSectionProps {
   onTryGenerator?: () => void;
 }
 
-export default function HubspotSection({ onTryGenerator }: HubspotSectionProps) {
+export default function HubspotSection({
+  onTryGenerator,
+}: HubspotSectionProps) {
   return (
-    <section id="about" className="bg-[#f8f9fe] text-slate-900 py-24 lg:py-32 overflow-hidden relative z-10 border-b border-slate-200/60">
+    <section
+      id="about"
+      className="bg-[#f8f9fe] text-slate-900 py-24 lg:py-32 relative z-10 border-b border-slate-200/60"
+    >
+      {/* Background extension — pulls the white bg up behind the bottom
+          portion of the InteractiveServices cards above this section.
+          Tune -top-[140px] / h-[140px] together to move the split line
+          up or down through the cards (e.g. -top-[230px] h-[230px] to
+          push the split closer to the vertical middle of the cards). */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -top-[240px] inset-x-0 h-[240px] bg-[#f8f9fe]"
+      />
+
       {/* Background Subtle Gradient Mesh */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.08),rgba(255,255,255,0))]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
           {/* Left Column Text Content */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] font-['Plus_Jakarta_Sans']">
@@ -66,7 +80,6 @@ export default function HubspotSection({ onTryGenerator }: HubspotSectionProps) 
           {/* Right Column Stacked Overlapping Image Cards */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-lg">
-              
               {/* Top Larger Image Card */}
               <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white aspect-[4/3] w-full ml-auto group relative">
                 <img
@@ -91,10 +104,8 @@ export default function HubspotSection({ onTryGenerator }: HubspotSectionProps) 
               <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none -z-10" />
             </div>
           </div>
-
         </div>
       </div>
     </section>
   );
 }
-

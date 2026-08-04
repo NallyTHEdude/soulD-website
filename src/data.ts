@@ -59,7 +59,6 @@ export const WHAT_WE_DO_DATA = {
     },
   ],
 };
-
 export const SERVICES_DATA: Service[] = [
   {
     id: "web-dev",
@@ -67,7 +66,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "Custom, fast, and fully responsive websites tailored to your business goals. Designed for seamless user experience, high conversion rates, and search engine visibility.",
     icon: "globe",
-    image: "/images/services/website-development.jpg",
+    image:
+      "https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Custom Responsive Layouts & UI/UX",
       "High-Speed Performance & Security",
@@ -81,7 +81,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "Native and cross-platform mobile applications for iOS and Android. Built with modern architectures, intuitive features, and smooth user interfaces.",
     icon: "smartphone",
-    image: "/images/services/mobile-app-development.jpg",
+    image:
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&auto=format&fit=crop&q=80",
     features: [
       "iOS & Android Cross-Platform Apps",
       "Intuitive UI/UX Interface Design",
@@ -95,7 +96,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "Engaging written and visual content that communicates your brand message, boosts organic reach, and connects with your target audience.",
     icon: "pen-tool",
-    image: "/images/services/content-creation.jpg",
+    image:
+      "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Copywriting & Blog Articles",
       "Graphic Design & Visual Assets",
@@ -109,7 +111,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "High-impact video editing and production for Instagram Reels, YouTube Shorts, promotional ads, product videos, and corporate brand showcases.",
     icon: "video",
-    image: "/images/services/video-production.jpg",
+    image:
+      "https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Short-Form Video & Reels Editing",
       "Promotional Ad Video Editing",
@@ -123,7 +126,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "End-to-end social media growth and management across Instagram, Facebook, and LinkedIn to build a vibrant, loyal community around your brand.",
     icon: "megaphone",
-    image: "/images/services/social-media-management.jpg",
+    image:
+      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Content Calendar & Post Scheduling",
       "Community Engagement & DM Lead Gen",
@@ -137,7 +141,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "Targeted paid advertising campaigns on Google Search/Shopping and Meta (Facebook & Instagram) engineered for maximum ROI and quality lead acquisition.",
     icon: "network",
-    image: "/images/services/google-meta-ads.jpg",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Google Search, Display & Shopping Ads",
       "Meta (FB & IG) Target Funnels",
@@ -151,7 +156,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "Establish authority and showcase your professional journey with custom executive digital portfolios, personal branding websites, and resume showcases.",
     icon: "user-check",
-    image: "/images/services/personal-branding.jpg",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Custom Executive Portfolios",
       "Interactive Resume & Bio Showcase",
@@ -165,7 +171,8 @@ export const SERVICES_DATA: Service[] = [
     description:
       "Comprehensive brand identity design for new or existing products and services. From memorable logos and brand guidelines to market positioning.",
     icon: "sparkles",
-    image: "/images/services/product-branding.jpg",
+    image:
+      "https://images.unsplash.com/photo-1523726491678-bf852e717f6a?w=1200&auto=format&fit=crop&q=80",
     features: [
       "Logo & Typography System Design",
       "Brand Guidelines & Color Palette",
@@ -174,7 +181,6 @@ export const SERVICES_DATA: Service[] = [
     ],
   },
 ];
-
 export const REVIEW_METRICS: ReviewMetric[] = [
   {
     platform: 'Google',

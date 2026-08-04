@@ -1,7 +1,14 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram, ShieldCheck } from 'lucide-react';
+import { Link } from "react-router-dom";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+} from "lucide-react";
 import souldLogo from "../../assets/sould-logo.png";
-
 
 interface FooterProps {
   onOpenQuote: () => void;
@@ -24,13 +31,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 className="h-11 sm:h-12 w-auto object-contain rounded-lg transition-transform group-hover:scale-102"
               />
             </Link>
-
-            <p className="text-slate-400 text-sm leading-relaxed max-w-sm font-normal">
-              Providing end-to-end digital marketing solutions — Web & Mobile
-              App development, Meta & Google Ads, video editing, social media
-              management, and personal branding at reasonable rates.
+            <p className="text-slate-400 leading-relaxed max-w-sm font-normal text-3xl">
+              We would love to hear from you. Subscribe for more information.
             </p>
-
             <div className="flex items-center gap-3 pt-2">
               <a
                 href="#"
@@ -59,70 +62,12 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div className="space-y-3">
-            <h4 className="text-white font-bold text-xs uppercase tracking-widest text-indigo-400">
-              Navigation
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              <li>
-                <Link
-                  to="/"
-                  className="hover:text-indigo-400 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-indigo-400 transition-colors"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/work"
-                  className="hover:text-indigo-400 transition-colors"
-                >
-                  Our Work
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="hover:text-indigo-400 transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-indigo-400 transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={onOpenQuote}
-                  className="hover:text-indigo-400 transition-colors text-left cursor-pointer"
-                >
-                  Get a Quote
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 3: Services */}
-          <div className="space-y-3">
-            <h4 className="text-white font-bold text-xs uppercase tracking-widest text-indigo-400">
+          {/* Column 3: Services – 2 columns */}
+          <div className="lg:col-span-2 space-y-3">
+            <h4 className="text-white font-bold text-sm uppercase tracking-widest text-indigo-400">
               Our Services
             </h4>
-            <ul className="space-y-2 text-xs leading-relaxed">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-2xl leading-relaxed">
               <li>
                 <Link
                   to="/services"
@@ -190,38 +135,36 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 4: Contact & Growth Audit */}
+          {/* Column 4: Contact */}
           <div className="space-y-4">
-            <h4 className="text-white font-bold text-xs uppercase tracking-widest text-indigo-400">
+            <h4 className="text-white font-bold text-sm uppercase tracking-widest text-indigo-400">
               Contact Soul-D.
             </h4>
-            <div className="space-y-2.5 text-xs">
+            <div className="space-y-2.5 text-2xl">
               <a
                 href="mailto:soul.d.digitalmarketingsolutions@gmail.com"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-indigo-400 transition-colors break-all"
               >
-                <Mail className="w-4 h-4 text-indigo-400 flex-shrink-0" />
+                <Mail className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span>soul.d.digitalmarketingsolutions@gmail.com</span>
               </a>
               <a
                 href="tel:+919866500578"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-indigo-400 transition-colors"
               >
-                <Phone className="w-4 h-4 text-indigo-400 flex-shrink-0" />
+                <Phone className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span>+91 9866500578</span>
               </a>
               <div className="flex items-center gap-2.5 text-slate-300">
-                <MapPin className="w-4 h-4 text-indigo-400 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-indigo-400 flex-shrink-0" />
                 <span>Digital Services Worldwide</span>
               </div>
             </div>
-
-            
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-2xl text-slate-500">
           <div>
             © {new Date().getFullYear()} Soul-D. | Digital Marketing Solutions.
             All rights reserved.

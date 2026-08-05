@@ -1,49 +1,48 @@
-import { useState } from 'react';
 import {
-  Globe,
-  Smartphone,
-  PenTool,
-  Video,
-  Megaphone,
-  Network,
-  UserCheck,
-  Sparkles,
+  ArrowRight,
   CheckCircle2,
   ChevronRight,
-  ArrowRight,
+  Globe,
+  Megaphone,
+  Network,
+  PenTool,
   ShieldCheck,
-  Zap,
-  Clock,
-  Layers,
-} from 'lucide-react';
-import { SERVICES_DATA } from '../data';
-import { Service } from '../types';
+  Smartphone,
+  Sparkles,
+  UserCheck,
+  Video,
+} from "lucide-react";
+import { useState } from "react";
+import { SERVICES_DATA } from "../data";
+import { Service } from "../types";
 
 interface ServicesPageProps {
   onOpenQuoteWithService: (serviceTitle: string) => void;
 }
 
-export default function ServicesPage({ onOpenQuoteWithService }: ServicesPageProps) {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+export default function ServicesPage({
+  onOpenQuoteWithService,
+}: ServicesPageProps) {
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [activeService, setActiveService] = useState<Service | null>(null);
 
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
-      case 'globe':
+      case "globe":
         return <Globe className="w-6 h-6" />;
-      case 'smartphone':
+      case "smartphone":
         return <Smartphone className="w-6 h-6" />;
-      case 'pen-tool':
+      case "pen-tool":
         return <PenTool className="w-6 h-6" />;
-      case 'video':
+      case "video":
         return <Video className="w-6 h-6" />;
-      case 'megaphone':
+      case "megaphone":
         return <Megaphone className="w-6 h-6" />;
-      case 'network':
+      case "network":
         return <Network className="w-6 h-6" />;
-      case 'user-check':
+      case "user-check":
         return <UserCheck className="w-6 h-6" />;
-      case 'sparkles':
+      case "sparkles":
         return <Sparkles className="w-6 h-6" />;
       default:
         return <Sparkles className="w-6 h-6" />;
@@ -52,19 +51,27 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
 
   // Categories mapping
   const categories = [
-    { id: 'all', label: 'All Services' },
-    { id: 'dev', label: 'Web & Mobile' },
-    { id: 'ads', label: 'Paid Ads & SMM' },
-    { id: 'creative', label: 'Content & Video' },
-    { id: 'branding', label: 'Branding & Portfolios' },
+    { id: "all", label: "All Services" },
+    { id: "dev", label: "Web & Mobile" },
+    { id: "ads", label: "Paid Ads & SMM" },
+    { id: "creative", label: "Content & Video" },
+    { id: "branding", label: "Branding & Portfolios" },
   ];
 
   const filterService = (service: Service) => {
-    if (selectedCategory === 'all') return true;
-    if (selectedCategory === 'dev') return service.id === 'web-dev' || service.id === 'app-dev';
-    if (selectedCategory === 'ads') return service.id === 'ads' || service.id === 'smm';
-    if (selectedCategory === 'creative') return service.id === 'content-creation' || service.id === 'video-production';
-    if (selectedCategory === 'branding') return service.id === 'personal-branding' || service.id === 'product-branding';
+    if (selectedCategory === "all") return true;
+    if (selectedCategory === "dev")
+      return service.id === "web-dev" || service.id === "app-dev";
+    if (selectedCategory === "ads")
+      return service.id === "ads" || service.id === "smm";
+    if (selectedCategory === "creative")
+      return (
+        service.id === "content-creation" || service.id === "video-production"
+      );
+    if (selectedCategory === "branding")
+      return (
+        service.id === "personal-branding" || service.id === "product-branding"
+      );
     return true;
   };
 
@@ -72,24 +79,24 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
 
   const processSteps = [
     {
-      num: '01',
-      title: 'Discovery & Consultation',
-      desc: 'We analyze your business goals, target audience, and current digital presence to chart a tailored plan.',
+      num: "01",
+      title: "Discovery & Consultation",
+      desc: "We analyze your business goals, target audience, and current digital presence to chart a tailored plan.",
     },
     {
-      num: '02',
-      title: 'Strategic Planning',
-      desc: 'Our team crafts a step-by-step roadmap with clear deliverables, timeline, and measurable KPIs.',
+      num: "02",
+      title: "Strategic Planning",
+      desc: "Our team crafts a step-by-step roadmap with clear deliverables, timeline, and measurable KPIs.",
     },
     {
-      num: '03',
-      title: 'Agile Execution',
-      desc: 'From custom code to video edits and ad campaigns, we execute rapidly with quality checks at every stage.',
+      num: "03",
+      title: "Agile Execution",
+      desc: "From custom code to video edits and ad campaigns, we execute rapidly with quality checks at every stage.",
     },
     {
-      num: '04',
-      title: 'Growth & Optimization',
-      desc: 'We continuously monitor performance, run split tests, and refine strategies to maximize your ROI.',
+      num: "04",
+      title: "Growth & Optimization",
+      desc: "We continuously monitor performance, run split tests, and refine strategies to maximize your ROI.",
     },
   ];
 
@@ -101,17 +108,18 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 font-['Plus_Jakarta_Sans']">
             Solutions Designed To <br className="hidden sm:inline" />
-            <span className="text-indigo-400">Scale Your Business</span>
+            <span className="text-[#0555F0]">Scale Your Business</span>
           </h1>
           <p className="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
-            From modern web & mobile applications to high-ROI Meta & Google ad campaigns and creative video production — explore our full suite of services.
+            From modern web & mobile applications to high-ROI Meta & Google ad
+            campaigns and creative video production — explore our full suite of
+            services.
           </p>
         </div>
       </section>
 
       {/* Services Filter and Section */}
       <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Filter Pills */}
         <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
           {categories.map((cat) => (
@@ -120,8 +128,8 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all cursor-pointer ${
                 selectedCategory === cat.id
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                  ? "bg-indigo-600 text-white shadow-md shadow-indigo-600/20"
+                  : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
               }`}
             >
               {cat.label}
@@ -149,7 +157,10 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
 
                 <ul className="space-y-2 mb-6 bg-slate-50 p-3.5 rounded-xl border border-slate-100">
                   {service.features.map((feat) => (
-                    <li key={feat} className="flex items-center gap-2 text-xs text-slate-700 font-medium truncate">
+                    <li
+                      key={feat}
+                      className="flex items-center gap-2 text-xs text-slate-700 font-medium truncate"
+                    >
                       <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600 flex-shrink-0" />
                       <span className="truncate">{feat}</span>
                     </li>
@@ -187,18 +198,26 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
               Our Proven Service Delivery Process
             </h2>
             <p className="text-slate-600 text-base sm:text-lg">
-              We streamline execution to ensure your projects are delivered on time, within budget, and to the highest standards.
+              We streamline execution to ensure your projects are delivered on
+              time, within budget, and to the highest standards.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {processSteps.map((step) => (
-              <div key={step.num} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative">
+              <div
+                key={step.num}
+                className="bg-slate-50 p-6 rounded-2xl border border-slate-100 relative"
+              >
                 <span className="text-3xl font-extrabold text-indigo-600 block mb-3 font-mono">
                   {step.num}
                 </span>
-                <h4 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h4>
-                <p className="text-xs text-slate-600 leading-relaxed">{step.desc}</p>
+                <h4 className="text-lg font-bold text-slate-900 mb-2">
+                  {step.title}
+                </h4>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -212,11 +231,14 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
             Ready to Take Your Brand to the Next Level?
           </h2>
           <p className="text-slate-300 mb-8 max-w-2xl mx-auto text-base sm:text-lg">
-            Get in touch with our team today for a tailored quote and strategy blueprint tailored to your budget.
+            Get in touch with our team today for a tailored quote and strategy
+            blueprint tailored to your budget.
           </p>
           <button
             type="button"
-            onClick={() => onOpenQuoteWithService('General Digital Consultation')}
+            onClick={() =>
+              onOpenQuoteWithService("General Digital Consultation")
+            }
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-base shadow-lg transition-all cursor-pointer"
           >
             <span>Get Free Quote Now</span>
@@ -229,12 +251,21 @@ export default function ServicesPage({ onOpenQuoteWithService }: ServicesPagePro
       {activeService && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-xs">
           <div className="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl animate-in zoom-in-95">
-            <h3 className="text-2xl font-bold text-slate-900 mb-3">{activeService.title}</h3>
-            <p className="text-slate-600 text-sm leading-relaxed mb-6">{activeService.description}</p>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">Key Features & Deliverables</h4>
+            <h3 className="text-2xl font-bold text-slate-900 mb-3">
+              {activeService.title}
+            </h3>
+            <p className="text-slate-600 text-sm leading-relaxed mb-6">
+              {activeService.description}
+            </p>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3">
+              Key Features & Deliverables
+            </h4>
             <ul className="space-y-2 mb-8">
               {activeService.features.map((f) => (
-                <li key={f} className="flex items-center gap-2 text-sm text-slate-700">
+                <li
+                  key={f}
+                  className="flex items-center gap-2 text-sm text-slate-700"
+                >
                   <ShieldCheck className="w-4 h-4 text-indigo-600 flex-shrink-0" />
                   <span>{f}</span>
                 </li>

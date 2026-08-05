@@ -1,6 +1,6 @@
 import { HUBSPOT_DATA } from "../data";
 import { Sparkles, Layers, CheckCircle2, ArrowRight } from "lucide-react";
-
+import StatsBar from "./ui/StatsBar";
 interface HubspotSectionProps {
   onTryGenerator?: () => void;
 }
@@ -23,6 +23,9 @@ export default function HubspotSection({
         className="pointer-events-none absolute -top-[240px] inset-x-0 h-[240px] bg-[#f8f9fe]"
       />
 
+      {/* Stats bar */}
+      <StatsBar />
+
       {/* Background Subtle Gradient Mesh */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.08),rgba(255,255,255,0))]" />
 
@@ -31,7 +34,7 @@ export default function HubspotSection({
           {/* Left Column Text Content */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] font-['Plus_Jakarta_Sans']">
-              {HUBSPOT_DATA.title}
+              Transforming Ideas <span className="block">into High-Performance</span>  <span className="text-[#0555F0] block">Digital Assets</span>
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
@@ -40,19 +43,19 @@ export default function HubspotSection({
 
             <div className="grid grid-cols-2 gap-4 pt-2 pb-2">
               <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Web & Mobile Apps</span>
               </div>
               <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Meta & Google Ads</span>
               </div>
               <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Video Editing & Reels</span>
               </div>
               <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Reasonable Pricing</span>
               </div>
             </div>
@@ -61,7 +64,7 @@ export default function HubspotSection({
               <button
                 type="button"
                 onClick={onTryGenerator}
-                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0555F0] to-[#4F46E5] hover:from-[#0444C0] hover:to-[#4338CA] text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{HUBSPOT_DATA.ctaText}</span>
                 <Sparkles className="w-4 h-4 text-indigo-200" />

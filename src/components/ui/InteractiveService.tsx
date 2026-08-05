@@ -21,7 +21,7 @@ interface InteractiveServicesProps {
 }
 
 const CARD_WIDTH = 350;
-const CARD_GAP = 10;
+const CARD_GAP = 30;
 const VISIBLE = 4;
 const STEP = (CARD_WIDTH + CARD_GAP) * VISIBLE;
 

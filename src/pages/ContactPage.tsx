@@ -1,6 +1,13 @@
-import { useState, FormEvent } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, MessageSquare, HelpCircle, ChevronDown } from 'lucide-react';
-import { COMPANY_DETAILS } from '../data';
+import {
+  CheckCircle2,
+  Mail,
+  MapPin,
+  Phone,
+  Send,
+} from "lucide-react";
+import { FormEvent, useState } from "react";
+import { COMPANY_DETAILS } from "../data";
+import FaqSection from "../components/FaqSection";
 
 interface ContactPageProps {
   onOpenQuote: () => void;
@@ -9,40 +16,20 @@ interface ContactPageProps {
 export default function ContactPage({ onOpenQuote }: ContactPageProps) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    service: 'Website Development',
-    budget: '$500 - $1,500',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    service: "Website Development",
+    budget: "$500 - $1,500",
+    message: "",
   });
 
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setFormSubmitted(true);
   };
-
-  const faqs = [
-    {
-      q: 'How fast do you respond to project inquiries?',
-      a: 'We typically respond to all inquiries within 2 to 4 business hours with a preliminary assessment or to schedule a discovery call.',
-    },
-    {
-      q: 'Are your rates really reasonable compared to traditional agencies?',
-      a: 'Yes! Our streamlined, tech-enabled workflow allows us to deliver top-tier agency quality at competitive rates with zero bloated overheads.',
-    },
-    {
-      q: 'Do you offer custom packages for small businesses and startups?',
-      a: 'Absolutely. We tailor package solutions specifically based on your goals, stage, and budget constraints.',
-    },
-    {
-      q: 'Can we get an ongoing monthly retainer for Meta & Google Ads or SMM?',
-      a: 'Yes, we offer both project-based fixed deliverables and monthly growth retainers for advertising and content management.',
-    },
-  ];
 
   return (
     <div className="bg-slate-50 min-h-screen text-slate-900">
@@ -51,10 +38,12 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
         <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500 via-slate-900 to-black pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6 font-['Plus_Jakarta_Sans']">
-            Let’s Discuss Your <span className="text-indigo-400">Next Project</span>
+            Let’s Discuss Your{" "}
+            <span className="text-[#0555F0]">Next Project</span>
           </h1>
           <p className="text-slate-300 text-lg sm:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
-            Have a question or ready to launch your next website, mobile app, or ad campaign? Reach out to us today.
+            Have a question or ready to launch your next website, mobile app, or
+            ad campaign? Reach out to us today.
           </p>
         </div>
       </section>
@@ -62,7 +51,6 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
       {/* Main Form & Info Grid */}
       <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
           {/* Left Info Column */}
           <div className="lg:col-span-5 space-y-8">
             <div>
@@ -70,7 +58,8 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                 Direct Contact Information
               </h2>
               <p className="text-slate-600 leading-relaxed text-sm">
-                Prefer direct communication? Reach out via phone, email, or schedule a quick discovery call with our team.
+                Prefer direct communication? Reach out via phone, email, or
+                schedule a quick discovery call with our team.
               </p>
             </div>
 
@@ -89,7 +78,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                   >
                     {COMPANY_DETAILS.phone}
                   </a>
-                  <p className="text-xs text-slate-500 mt-1">Mon - Sat: 9:00 AM - 8:00 PM</p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Mon - Sat: 9:00 AM - 8:00 PM
+                  </p>
                 </div>
               </div>
 
@@ -107,7 +98,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                   >
                     {COMPANY_DETAILS.email}
                   </a>
-                  <p className="text-xs text-slate-500 mt-1">2-4 Hour Guaranteed Response SLA</p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    2-4 Hour Guaranteed Response SLA
+                  </p>
                 </div>
               </div>
 
@@ -119,13 +112,15 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                   <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-0.5">
                     Headquarters
                   </span>
-                  <p className="text-sm font-bold text-slate-900">{COMPANY_DETAILS.address}</p>
-                  <p className="text-xs text-slate-500 mt-1">Serving Clients Globally</p>
+                  <p className="text-sm font-bold text-slate-900">
+                    {COMPANY_DETAILS.address}
+                  </p>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Serving Clients Globally
+                  </p>
                 </div>
               </div>
             </div>
-
-            
           </div>
 
           {/* Right Form Column */}
@@ -136,9 +131,13 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-6">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Message Sent Successfully!</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    Message Sent Successfully!
+                  </h3>
                   <p className="text-slate-600 text-sm max-w-md mx-auto mb-6 leading-relaxed">
-                    Thank you for reaching out to Soul-D. Digital Marketing Solutions. Our strategy team will review your message and reach out shortly.
+                    Thank you for reaching out to Soul-D. Digital Marketing
+                    Solutions. Our strategy team will review your message and
+                    reach out shortly.
                   </p>
                   <button
                     type="button"
@@ -151,8 +150,13 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-1">Project Inquiry Form</h3>
-                    <p className="text-xs text-slate-500">Fill in the details below and we will get back to you promptly.</p>
+                    <h3 className="text-xl font-bold text-slate-900 mb-1">
+                      Project Inquiry Form
+                    </h3>
+                    <p className="text-xs text-slate-500">
+                      Fill in the details below and we will get back to you
+                      promptly.
+                    </p>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -164,7 +168,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                         type="text"
                         required
                         value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
                         placeholder="John Doe"
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                       />
@@ -178,7 +184,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                         type="email"
                         required
                         value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
                         placeholder="john@example.com"
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                       />
@@ -193,7 +201,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                       <input
                         type="tel"
                         value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, phone: e.target.value })
+                        }
                         placeholder="+1 (555) 000-0000"
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                       />
@@ -206,7 +216,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                       <input
                         type="text"
                         value={formData.company}
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, company: e.target.value })
+                        }
                         placeholder="Acme Corp"
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                       />
@@ -220,7 +232,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                       </label>
                       <select
                         value={formData.service}
-                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, service: e.target.value })
+                        }
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                       >
                         <option>Website Development</option>
@@ -240,7 +254,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                       </label>
                       <select
                         value={formData.budget}
-                        onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, budget: e.target.value })
+                        }
                         className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 bg-white focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                       >
                         <option>Below $500</option>
@@ -259,7 +275,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
                       required
                       rows={4}
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       placeholder="Tell us about your project, timeline, and goals..."
                       className="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-900 focus:outline-hidden focus:border-indigo-600 focus:ring-1 focus:ring-indigo-600"
                     />
@@ -278,47 +296,9 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
           </div>
         </div>
       </section>
-
+      
       {/* FAQ Section */}
-      <section className="bg-white py-20 border-t border-slate-200/80">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight mb-3 font-['Plus_Jakarta_Sans']">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-slate-600 text-sm">
-              Everything you need to know about partnering with Soul-D.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <div
-                key={faq.q}
-                className="border border-slate-200 rounded-2xl overflow-hidden transition-all"
-              >
-                <button
-                  type="button"
-                  onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full px-6 py-4 text-left font-bold text-slate-900 text-base flex items-center justify-between hover:bg-slate-50 cursor-pointer"
-                >
-                  <span>{faq.q}</span>
-                  <ChevronDown
-                    className={`w-5 h-5 text-slate-500 transition-transform ${
-                      openFaq === idx ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                {openFaq === idx && (
-                  <div className="px-6 pb-5 pt-1 text-slate-600 text-sm leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                    {faq.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FaqSection />
     </div>
   );
 }

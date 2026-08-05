@@ -111,7 +111,7 @@ export default function AwardsAndReviews() {
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans'] mb-4">
           Trusted Industry Recognition
         </h2>
-        <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-slate-600 text-2xl sm:text-4xl max-w-10xl mx-auto leading-relaxed">
           Certified by global tech platforms and top-rated by clients for delivering high performance, transparent pricing, and measurable growth.
         </p>
       </div>

@@ -63,7 +63,7 @@ export default function Header({
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled || !isHomePage
-          ? "bg-slate-950/90 backdrop-blur-md py-3 shadow-lg border-b border-white/10"
+          ? "bg-black/85 backdrop-blur-md py-3 shadow-lg border-b border-white/10"
           : "bg-transparent py-5"
       }`}
     >
@@ -119,7 +119,7 @@ export default function Header({
                         className="w-full text-left px-3.5 py-2.5 rounded-lg text-xs font-medium text-slate-300 hover:text-white hover:bg-indigo-600/20 hover:border-l-2 hover:border-indigo-500 transition-all flex items-center justify-between group/item cursor-pointer"
                       >
                         <span>{service.name}</span>
-                        <ArrowRight className="w-3 h-3 opacity-0 group-hover/item:opacity-100 text-indigo-400 transition-opacity" />
+                        <ArrowRight className="w-3 h-3 opacity-0 group-hover/item:opacity-100 text-[#0555F0] transition-opacity" />
                       </button>
                     ))}
                   </div>

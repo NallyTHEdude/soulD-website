@@ -176,37 +176,17 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               </a>
               <div className="flex items-center gap-2.5 text-slate-300">
                 <MapPin className="w-5 h-5 text-[#0555F0] flex-shrink-0" />
-                <span>Digital Services Worldwide</span>
+                <span>Hyderabad, India</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-2xl text-slate-500">
+        <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-center gap-4 text-xl text-slate-500">
           <div>
             © {new Date().getFullYear()} Soul-D. | Digital Marketing Solutions.
             All rights reserved.
-          </div>
-          <div className="flex items-center gap-6">
-            <Link
-              to="/contact"
-              className="hover:text-slate-300 transition-colors"
-            >
-              Contact
-            </Link>
-            <Link
-              to="/about"
-              className="hover:text-slate-300 transition-colors"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/services"
-              className="hover:text-slate-300 transition-colors"
-            >
-              Services
-            </Link>
           </div>
         </div>
       </div>

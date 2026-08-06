@@ -13,6 +13,7 @@ import {
   Video,
 } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { SERVICES_DATA } from "../../data";
 import { Service } from "../../types";
 
@@ -34,6 +35,7 @@ export default function InteractiveServices({
   );
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const navigate = useNavigate();
   const total = SERVICES_DATA.length;
   const maxPage = Math.max(0, Math.ceil(total / VISIBLE) - 1);
 
@@ -77,9 +79,66 @@ export default function InteractiveServices({
   const viewportWidth = CARD_WIDTH * VISIBLE + CARD_GAP * (VISIBLE - 1);
 
   return (
-    <section id="services" className="relative z-30 -mt-16 pb-0 mb-0">
-      <div className="mx-auto max-w-[1650px] px-6">
-        <div className="flex justify-center">
+    <section
+      id="services"
+      className="relative z-30 mt-8 pb-0 mb-0 overflow-hidden"
+    >
+      <div className="mx-auto max-w-[1650px] px-4 sm:px-6">
+        <div className="grid grid-cols-1 gap-4 pb-8 md:hidden">
+          {SERVICES_DATA.map((service) => (
+            <div
+              key={service.id}
+              onClick={() => navigate(`/services/${service.id}`)}
+              className="group relative overflow-hidden rounded-3xl min-h-70 shadow-lg cursor-pointer"
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-black/55" />
+
+              <div className="relative flex min-h-70 flex-col justify-end p-5 text-white">
+                <span className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-[#0555F0]">
+                  Service
+                </span>
+
+                <h3 className="max-w-[18rem] text-2xl font-bold leading-tight text-white">
+                  {service.title}
+                </h3>
+
+                <p className="mt-2 text-sm leading-relaxed text-slate-200">
+                  {service.description}
+                </p>
+
+                <div className="mt-5 flex items-center justify-between gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setActiveModalService(service)}
+                    className="group/button flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-blue-300"
+                  >
+                    Explore
+                    <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1" />
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onOpenQuoteWithService?.(service.title);
+                    }}
+                    className="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+                  >
+                    Quote
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="hidden md:flex justify-center">
           <div className="relative w-full max-w-[1550px]">
             {/* Left arrow */}
             <button
@@ -128,7 +187,8 @@ export default function InteractiveServices({
                 {SERVICES_DATA.map((service) => (
                   <div
                     key={service.id}
-                    className="group relative shrink-0 overflow-hidden rounded-[32px]"
+                    onClick={() => navigate(`/services/${service.id}`)}
+                    className="group relative shrink-0 overflow-hidden rounded-4xl cursor-pointer"
                     style={{
                       width: CARD_WIDTH,
                       height: 460,
@@ -142,7 +202,7 @@ export default function InteractiveServices({
                     />
 
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent bg-black/60" />
+                    <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-900/40 to-transparent bg-black/60" />
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col justify-end p-8">
@@ -150,13 +210,16 @@ export default function InteractiveServices({
                         Service
                       </span>
 
-                      <h3 className="max-w-[220px] text-3xl font-bold leading-tight text-white">
+                      <h3 className="max-w-55 text-3xl font-bold leading-tight text-white">
                         {service.title}
                       </h3>
 
                       <div className="mt-8 flex items-center justify-between">
                         <button
-                          onClick={() => setActiveModalService(service)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            navigate(`/services/${service.id}`);
+                          }}
                           className="group/button flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-blue-300"
                         >
                           Explore
@@ -178,9 +241,9 @@ export default function InteractiveServices({
 
       {/* Service Modal */}
       {activeModalService && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 backdrop-blur-sm p-6">
-          <div className="relative w-full max-w-3xl overflow-hidden rounded-[32px] bg-white shadow-2xl">
-            <div className="relative overflow-hidden bg-gradient-to-br from-[#0555F0] via-blue-600 to-indigo-700 px-10 py-10 text-white">
+        <div className="fixed inset-0 z-100 flex items-center justify-center bg-black/70 backdrop-blur-sm p-6">
+          <div className="relative w-full max-w-3xl overflow-hidden rounded-4xl bg-white shadow-2xl">
+            <div className="relative overflow-hidden bg-linear-to-br from-[#0555F0] via-blue-600 to-indigo-700 px-10 py-10 text-white">
               <div className="absolute -right-10 -top-10 h-44 w-44 rounded-full bg-white/10" />
               <div className="absolute -left-10 bottom-0 h-32 w-32 rounded-full bg-white/10" />
 

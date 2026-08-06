@@ -12,8 +12,6 @@ interface AboutPageProps {
 }
 
 export default function AboutPage({ onOpenQuote }: AboutPageProps) {
-  
-
   const values = [
     {
       icon: <Target className="w-6 h-6 text-indigo-600" />,

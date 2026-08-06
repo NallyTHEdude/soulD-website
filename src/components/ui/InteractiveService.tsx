@@ -142,11 +142,11 @@ export default function InteractiveServices({
                     />
 
                     {/* Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent bg-black/60" />
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col justify-end p-8">
-                      <span className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-blue-300">
+                      <span className="mb-3 text-lg font-extrabold uppercase tracking-[0.25em] text-[#0555F0]">
                         Service
                       </span>
 

@@ -264,7 +264,7 @@ export default function CustomProposalSection() {
                     className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#0555F0] hover:bg-[#0444C0] text-white font-bold text-sm py-4 shadow-lg shadow-indigo-600/25 transition-all"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Request Custom Proposal</span>
+                    <span>Submit Your Request </span>
                   </button>
                 </form>
               )}

@@ -17,7 +17,7 @@ interface FooterProps {
 
 export default function Footer({ onOpenQuote }: FooterProps) {
   return (
-    <footer className="relative z-10 bg-[#090b14] text-slate-400 pt-20 pb-12 border-t border-slate-800/80">
+    <footer className="footer relative z-10 bg-[#090b14] text-slate-400 pt-20 pb-12 border-t border-slate-800/80">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
           {/* Brand Info */}
@@ -37,7 +37,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a
-                href="https://www.linkedin.com/company/soulddigitallysoulful/"
+                href="https://www.linkedin.com/company/soulddigitallysoulful"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Soul-D. on LinkedIn"
@@ -46,7 +46,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 <Linkedin className="w-9 h-9" />
               </a>
               <a
-                href="https://www.instagram.com/soul.d.digitallysoulful/"
+                href="https://www.instagram.com/soul.d.digitalmarketing"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Soul-D. on Instagram"
@@ -64,7 +64,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 <Facebook className="w-9 h-9" />
               </a>
               <a
-                href="https://www.youtube.com/@soul.d.digitallysoulful/"
+                href="https://www.youtube.com/@Soul.D.DigitalMarketing"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Soul-D. on YouTube"
@@ -184,7 +184,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-center gap-4 text-xl text-slate-500">
-          <div>
+          <div className="">
             © {new Date().getFullYear()} Soul-D. | Digital Marketing Solutions.
             All rights reserved.
           </div>

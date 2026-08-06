@@ -46,7 +46,7 @@ const FaqSection = () => {
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                 aria-expanded={openFaq === idx}
                 aria-controls={`faq-${idx}`}
-                className="w-full px-6 py-4 text-left font-bold text-slate-900 text-base flex items-center justify-between hover:bg-slate-50 cursor-pointer"
+                className="w-full px-6 py-4 text-left font-bold text-slate-900 text-lg sm:text-xl flex items-center justify-between hover:bg-slate-50 cursor-pointer"
               >
                 <span>{faq.q}</span>
                 <ChevronDown

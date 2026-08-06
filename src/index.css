@@ -31,6 +31,10 @@ h6 {
   font-family: "Quicksand", sans-serif;
 }
 
+.footer {
+  font-family: "Quicksand", sans-serif;
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0%);

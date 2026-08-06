@@ -1,5 +1,12 @@
+import {
+  ArrowRight,
+  BadgeDollarSign,
+  Clapperboard,
+  Megaphone,
+  Smartphone,
+  Sparkles,
+} from "lucide-react";
 import { HUBSPOT_DATA } from "../data";
-import { Sparkles, Layers, CheckCircle2, ArrowRight } from "lucide-react";
 import StatsBar from "./ui/StatsBar";
 interface HubspotSectionProps {
   onTryGenerator?: () => void;
@@ -34,7 +41,9 @@ export default function HubspotSection({
           {/* Left Column Text Content */}
           <div className="lg:col-span-6 space-y-6">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.15] font-['Plus_Jakarta_Sans']">
-              Transforming Ideas <span className="block">into High-Performance</span>  <span className="text-[#0555F0] block">Digital Assets</span>
+              Transforming Ideas{" "}
+              <span className="block">into High-Performance</span>{" "}
+              <span className="text-[#0555F0] block">Digital Assets</span>
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
@@ -42,20 +51,20 @@ export default function HubspotSection({
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2 pb-2">
-              <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+              <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
+                <Smartphone className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Web & Mobile Apps</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+              <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
+                <Megaphone className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Meta & Google Ads</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+              <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
+                <Clapperboard className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Video Editing & Reels</span>
               </div>
-              <div className="flex items-center gap-2.5 text-sm text-slate-700 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+              <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
+                <BadgeDollarSign className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
                 <span>Reasonable Pricing</span>
               </div>
             </div>

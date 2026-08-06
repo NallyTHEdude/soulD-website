@@ -1,9 +1,9 @@
 const StatsBar = () => {
   const stats = [
-    { label: "Projects Delivered", value: "150+" },
+    { label: "Projects Delivered", value: "100+" },
     { label: "Client Retention Rate", value: "98%" },
-    { label: "Revenue Generated", value: "$12M+" },
-    { label: "Industry Awards", value: "15+" },
+    { label: "Industries Covered", value: "10+" },
+    { label: "Countries, Global Footprint", value: "3+" },
   ];
   return (
     <div>

@@ -1,11 +1,10 @@
-import AwardsAndReviews from "../components/AwardsAndReviews";
-import CustomProposalSection from "../components/CustomProposalSection";
-import FaqSection from "../components/FaqSection";
-import HeroSection from "../components/HeroSection";
-import HubspotSection from "../components/HubspotSection";
-import StatsBar from "../components/ui/StatsBar";
+import AwardsAndReviews from "../components/sections/AwardsAndReviews";
+import CustomProposalSection from "../components/sections/CustomProposalSection";
+import FaqSection from "../components/sections/FaqSection";
+import HeroSection from "../components/sections/HeroSection";
+import HubspotSection from "../components/sections/HubspotSection";
+import WhatWeDoSection from "../components/sections/WhatWeDoSection";
 import InteractiveServices from "../components/ui/InteractiveService";
-import WhatWeDoSection from "../components/WhatWeDoSection";
 interface HomePageProps {
   onOpenQuote: () => void;
   onOpenQuoteWithService: (serviceTitle: string) => void;
@@ -26,7 +25,6 @@ export default function HomePage({
 
       {/* Interactive Services */}
       <InteractiveServices onOpenQuoteWithService={onOpenQuoteWithService} />
-      
 
       {/* HubSpot Drag-and-Drop Section */}
       <HubspotSection onTryGenerator={onOpenBuyNow} />

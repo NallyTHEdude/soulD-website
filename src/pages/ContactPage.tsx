@@ -1,13 +1,7 @@
-import {
-  CheckCircle2,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-} from "lucide-react";
+import { CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
 import { FormEvent, useState } from "react";
+import FaqSection from "../components/sections/FaqSection";
 import { COMPANY_DETAILS } from "../data";
-import FaqSection from "../components/FaqSection";
 
 interface ContactPageProps {
   onOpenQuote: () => void;
@@ -24,7 +18,6 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
     budget: "$500 - $1,500",
     message: "",
   });
-
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -296,7 +289,7 @@ export default function ContactPage({ onOpenQuote }: ContactPageProps) {
           </div>
         </div>
       </section>
-      
+
       {/* FAQ Section */}
       <FaqSection />
     </div>

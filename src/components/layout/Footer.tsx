@@ -9,7 +9,7 @@ import {
   Youtube,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import souldLogo from "../../assets/sould-logo.png";
+import souldLogo from "../../../assets/sould-logo.png";
 
 interface FooterProps {
   onOpenQuote: () => void;

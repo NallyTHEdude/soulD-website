@@ -1,7 +1,7 @@
 import { ArrowRight, ChevronDown, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import souldLogo from "../../assets/sould-logo-1.png";
+import souldLogo from "../../../assets/sould-logo-1.png";
 
 interface HeaderProps {
   onOpenQuote: () => void;

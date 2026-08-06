@@ -1,61 +1,61 @@
-import { Service, ReviewMetric } from './types';
+import { ReviewMetric, Service } from "../types";
 
 export const COMPANY_DETAILS = {
-  name: 'Soul-D. | Digital Marketing Solutions',
-  shortName: 'Soul-D.',
-  tagline: 'Digital Marketing Solutions at Reasonable Rates',
-  phone: '+91 9866500578',
-  email: 'soul.d.digitalmarketingsolutions@gmail.com',
-  address: 'India',
+  name: "Soul-D. | Digital Marketing Solutions",
+  shortName: "Soul-D.",
+  tagline: "Digital Marketing Solutions at Reasonable Rates",
+  phone: "+91 9866500578",
+  email: "soul.d.digitalmarketingsolutions@gmail.com",
+  address: "India",
 };
 
 export const HERO_DATA = {
-  subtitle: 'SOUL-D. DIGITAL MARKETING SOLUTIONS',
-  title: 'Elevate Your Brand With\nAll-In-One Digital Solutions',
+  subtitle: "SOUL-D. DIGITAL MARKETING SOLUTIONS",
+  title: "Elevate Your Brand With\nAll-In-One Digital Solutions",
   description:
-    'From website & mobile app development to video production, Meta & Google Ads, social media growth, and personal branding — Soul-D. delivers high-impact digital marketing solutions at reasonable rates.',
+    "From website & mobile app development to video production, Meta & Google Ads, social media growth, and personal branding — Soul-D. delivers high-impact digital marketing solutions at reasonable rates.",
   heroBgImage:
-    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop',
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop",
 };
 
 export const HUBSPOT_DATA = {
-  badge: 'DIGITAL INNOVATION HUB',
-  title: 'Transforming Ideas Into High-Performance Digital Assets',
+  badge: "DIGITAL INNOVATION HUB",
+  title: "Transforming Ideas Into High-Performance Digital Assets",
   description:
-    'Whether you need a custom responsive website, a feature-packed mobile app, or an executive brand portfolio, Soul-D. combines creative design and modern technology to launch your brand effortlessly.',
-  ctaText: 'Explore Web & App Solutions',
+    "Whether you need a custom responsive website, a feature-packed mobile app, or an executive brand portfolio, Soul-D. combines creative design and modern technology to launch your brand effortlessly.",
+  ctaText: "Explore Web & App Solutions",
   image1:
-    'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop',
+    "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
   image2:
-    'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&crop=faces',
+    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&crop=faces",
 };
 
 export const WHAT_WE_DO_DATA = {
-  tag: 'WHAT WE DO',
-  title: 'Marketing That Actually\nMoves the Needle',
+  tag: "WHAT WE DO",
+  title: "Marketing That Actually\nMoves the Needle",
   description:
-    'At Soul-D., we believe top-tier digital marketing should be both powerful and affordable. We craft tailored strategies across web, mobile, creative content, and targeted ad channels.',
+    "At Soul-D., we believe top-tier digital marketing should be both powerful and affordable. We craft tailored strategies across web, mobile, creative content, and targeted ad channels.",
   columns: [
     {
-      id: 'strategy',
-      title: 'Strategic Brand Foundation',
+      id: "strategy",
+      title: "Strategic Brand Foundation",
       description:
-        'We define your unique positioning, product branding, and target audience touchpoints so your business stands out in competitive markets.',
-      icon: 'message-square',
+        "We define your unique positioning, product branding, and target audience touchpoints so your business stands out in competitive markets.",
+      icon: "message-square",
     },
     {
-      id: 'execution',
-      title: 'Multi-Channel Execution',
+      id: "execution",
+      title: "Multi-Channel Execution",
       description:
-        'From high-converting Meta & Google ad campaigns to video editing, mobile apps, and social media management, we execute with precision.',
-      icon: 'send',
+        "From high-converting Meta & Google ad campaigns to video editing, mobile apps, and social media management, we execute with precision.",
+      icon: "send",
     },
     {
-      id: 'scale',
-      title: 'Reasonable Rates & High ROI',
+      id: "scale",
+      title: "Reasonable Rates & High ROI",
       description:
-        'We track metrics that directly drive revenue — leads, app downloads, and sales — offering premium marketing solutions at budget-friendly rates.',
-      icon: 'layout-grid',
+        "We track metrics that directly drive revenue — leads, app downloads, and sales — offering premium marketing solutions at budget-friendly rates.",
+      icon: "layout-grid",
     },
   ],
 };
@@ -183,35 +183,35 @@ export const SERVICES_DATA: Service[] = [
 ];
 export const REVIEW_METRICS: ReviewMetric[] = [
   {
-    platform: 'Google',
-    rating: '4.9',
-    reviewsCount: '150+ Happy Clients',
-    icon: 'google',
+    platform: "Google",
+    rating: "4.9",
+    reviewsCount: "150+ Happy Clients",
+    icon: "google",
   },
   {
-    platform: 'Meta Ads',
-    rating: '5.0',
-    reviewsCount: 'High ROAS Campaigns',
-    icon: 'facebook',
+    platform: "Meta Ads",
+    rating: "5.0",
+    reviewsCount: "High ROAS Campaigns",
+    icon: "facebook",
   },
   {
-    platform: 'Satisfaction',
-    rating: '100%',
-    reviewsCount: 'Reasonable Rates Guarantee',
-    icon: 'star',
+    platform: "Satisfaction",
+    rating: "100%",
+    reviewsCount: "Reasonable Rates Guarantee",
+    icon: "star",
   },
   {
-    platform: 'Overall',
-    rating: '4.9/5',
-    reviewsCount: 'Top Rated Agency',
-    icon: 'star',
+    platform: "Overall",
+    rating: "4.9/5",
+    reviewsCount: "Top Rated Agency",
+    icon: "star",
   },
 ];
 
 export const CLIENT_LOGOS = [
-  { id: 'logo-1', name: 'Soul-D. Web' },
-  { id: 'logo-2', name: 'Soul-D. Apps' },
-  { id: 'logo-3', name: 'Soul-D. Media' },
-  { id: 'logo-4', name: 'Soul-D. Ads' },
-  { id: 'logo-5', name: 'Soul-D. Branding' },
+  { id: "logo-1", name: "Soul-D. Web" },
+  { id: "logo-2", name: "Soul-D. Apps" },
+  { id: "logo-3", name: "Soul-D. Media" },
+  { id: "logo-4", name: "Soul-D. Ads" },
+  { id: "logo-5", name: "Soul-D. Branding" },
 ];

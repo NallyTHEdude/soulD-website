@@ -1,5 +1,5 @@
 import { ChevronRight, LayoutGrid, MessageSquare, Send } from "lucide-react";
-import { WHAT_WE_DO_DATA } from "../data";
+import { WHAT_WE_DO_DATA } from "../../data";
 
 export default function WhatWeDoSection() {
   const getIcon = (iconName: string) => {

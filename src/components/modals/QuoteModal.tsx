@@ -1,6 +1,6 @@
-import { useState, useEffect, FormEvent } from 'react';
-import { X, CheckCircle2, Send, Phone, Mail, FileText } from 'lucide-react';
-import { SERVICES_DATA } from '../data';
+import { CheckCircle2, FileText, Mail, Phone, Send, X } from "lucide-react";
+import { FormEvent, useEffect, useState } from "react";
+import { SERVICES_DATA } from "../../data";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -8,24 +8,28 @@ interface QuoteModalProps {
   preselectedService?: string;
 }
 
-export default function QuoteModal({ isOpen, onClose, preselectedService }: QuoteModalProps) {
+export default function QuoteModal({
+  isOpen,
+  onClose,
+  preselectedService,
+}: QuoteModalProps) {
   const [selectedServices, setSelectedServices] = useState<string[]>(
-    preselectedService ? [preselectedService] : ['Website Development']
+    preselectedService ? [preselectedService] : ["Website Development"],
   );
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [name, setName] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [isOpen]);
 
@@ -47,7 +51,6 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
       <div className="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border border-slate-100 my-8">
-        
         {/* Close button */}
         <button
           type="button"
@@ -62,14 +65,26 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
             <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2">
               <CheckCircle2 className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-extrabold text-slate-900">Request Received!</h3>
+            <h3 className="text-2xl font-extrabold text-slate-900">
+              Request Received!
+            </h3>
             <p className="text-slate-600 max-w-md mx-auto text-sm">
-              Thank you{name ? `, ${name}` : ''}. Our Soul-D. digital team will contact you at <strong className="text-indigo-600">{email}</strong> / <strong className="text-indigo-600">{phone}</strong> shortly.
+              Thank you{name ? `, ${name}` : ""}. Our Soul-D. digital team will
+              contact you at{" "}
+              <strong className="text-indigo-600">{email}</strong> /{" "}
+              <strong className="text-indigo-600">{phone}</strong> shortly.
             </p>
             <div className="bg-slate-50 p-4 rounded-2xl max-w-md mx-auto text-left text-xs text-slate-600 space-y-1.5 my-4 border border-slate-100">
-              <div><strong>Selected Service(s):</strong> {selectedServices.join(', ') || 'General Enquiry'}</div>
-              <div><strong>Contact Email:</strong> {email}</div>
-              <div><strong>Phone Number:</strong> {phone}</div>
+              <div>
+                <strong>Selected Service(s):</strong>{" "}
+                {selectedServices.join(", ") || "General Enquiry"}
+              </div>
+              <div>
+                <strong>Contact Email:</strong> {email}
+              </div>
+              <div>
+                <strong>Phone Number:</strong> {phone}
+              </div>
             </div>
             <button
               type="button"
@@ -86,13 +101,17 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                 <FileText className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="text-xl font-extrabold text-slate-900">Get a Custom Proposal</h3>
-                <p className="text-xs text-slate-500">Select services and leave your contact details for reasonable rate estimates</p>
+                <h3 className="text-xl font-extrabold text-slate-900">
+                  Get a Custom Proposal
+                </h3>
+                <p className="text-xs text-slate-500">
+                  Select services and leave your contact details for reasonable
+                  rate estimates
+                </p>
               </div>
             </div>
 
             <form onSubmit={handleSubmit} className="mt-6 space-y-5">
-              
               {/* Select Services */}
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2.5">
@@ -108,12 +127,14 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                         onClick={() => toggleService(s.title)}
                         className={`p-3 rounded-xl border text-left text-xs font-semibold transition-all flex items-center justify-between ${
                           active
-                            ? 'bg-indigo-50 border-indigo-600 text-indigo-900 shadow-sm'
-                            : 'bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300'
+                            ? "bg-indigo-50 border-indigo-600 text-indigo-900 shadow-sm"
+                            : "bg-slate-50 border-slate-200 text-slate-700 hover:border-slate-300"
                         }`}
                       >
                         <span className="truncate pr-2">{s.title}</span>
-                        {active && <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0" />}
+                        {active && (
+                          <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0" />
+                        )}
                       </button>
                     );
                   })}
@@ -125,9 +146,12 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-700">
                   2. Contact Information
                 </label>
-                
+
                 <div>
-                  <label htmlFor="quote-email" className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
+                  <label
+                    htmlFor="quote-email"
+                    className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5"
+                  >
                     <Mail className="w-3.5 h-3.5 text-indigo-600" />
                     <span>Contact Email *</span>
                   </label>
@@ -143,7 +167,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                 </div>
 
                 <div>
-                  <label htmlFor="quote-phone" className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5">
+                  <label
+                    htmlFor="quote-phone"
+                    className="block text-xs font-semibold text-slate-700 mb-1 flex items-center gap-1.5"
+                  >
                     <Phone className="w-3.5 h-3.5 text-indigo-600" />
                     <span>Phone Number *</span>
                   </label>
@@ -159,7 +186,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                 </div>
 
                 <div>
-                  <label htmlFor="quote-fullname" className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label
+                    htmlFor="quote-fullname"
+                    className="block text-xs font-semibold text-slate-700 mb-1"
+                  >
                     Your Name (Optional)
                   </label>
                   <input
@@ -173,7 +203,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                 </div>
 
                 <div>
-                  <label htmlFor="quote-message" className="block text-xs font-semibold text-slate-700 mb-1">
+                  <label
+                    htmlFor="quote-message"
+                    className="block text-xs font-semibold text-slate-700 mb-1"
+                  >
                     Project Message / Notes (Optional)
                   </label>
                   <textarea
@@ -196,13 +229,10 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }: Quot
                   <span>Submit Request</span>
                 </button>
               </div>
-
             </form>
           </div>
         )}
-
       </div>
     </div>
   );
 }
-

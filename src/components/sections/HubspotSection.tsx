@@ -6,8 +6,8 @@ import {
   Smartphone,
   Sparkles,
 } from "lucide-react";
-import { HUBSPOT_DATA } from "../data";
-import StatsBar from "./ui/StatsBar";
+import { HUBSPOT_DATA } from "../../data";
+import StatsBar from "../ui/StatsBar";
 interface HubspotSectionProps {
   onTryGenerator?: () => void;
 }

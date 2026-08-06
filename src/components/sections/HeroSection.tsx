@@ -1,6 +1,5 @@
-import { ArrowRight, Star, TrendingUp, ShieldCheck, Award } from 'lucide-react';
-import { HERO_DATA } from '../data';
-import SoulDLogo from './SoulDLogo';
+import { ArrowRight } from "lucide-react";
+import { HERO_DATA } from "../../data";
 
 interface HeroSectionProps {
   onOpenQuote: () => void;
@@ -8,12 +7,11 @@ interface HeroSectionProps {
 
 export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
   const handleLearnMore = () => {
-    const el = document.querySelector('#hubspot');
+    const el = document.querySelector("#hubspot");
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      el.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   return (
     <section
@@ -78,7 +76,6 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
             <br />
             in Hyderabad
           </h1>
-
 
           {/* Action Buttons */}
           <div className="flex flex-wrap justify-center items-center gap-6 mb-12 mt-25">

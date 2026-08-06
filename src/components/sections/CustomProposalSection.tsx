@@ -1,4 +1,3 @@
-import { FormEvent, useState } from 'react';
 import {
   CheckCircle2,
   Clock3,
@@ -6,9 +5,9 @@ import {
   Phone,
   Send,
   ShieldCheck,
-  Sparkles,
-} from 'lucide-react';
-import { COMPANY_DETAILS, SERVICES_DATA } from '../data';
+} from "lucide-react";
+import { FormEvent, useState } from "react";
+import { COMPANY_DETAILS, SERVICES_DATA } from "../../data";
 
 export default function CustomProposalSection() {
   const [submitted, setSubmitted] = useState(false);

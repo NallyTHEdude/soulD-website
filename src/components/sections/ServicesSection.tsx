@@ -1,19 +1,19 @@
-import { useState } from 'react';
 import {
-  Globe,
-  Smartphone,
-  PenTool,
-  Video,
-  Megaphone,
-  Network,
-  UserCheck,
-  Sparkles,
   CheckCircle2,
   ChevronRight,
+  Globe,
+  Megaphone,
+  Network,
+  PenTool,
   ShieldCheck,
-} from 'lucide-react';
-import { SERVICES_DATA } from '../data';
-import { Service } from '../types';
+  Smartphone,
+  Sparkles,
+  UserCheck,
+  Video,
+} from "lucide-react";
+import { useState } from "react";
+import { SERVICES_DATA } from "../../data";
+import { Service } from "../../types";
 
 interface ServicesSectionProps {
   onOpenQuoteWithService?: (serviceTitle: string) => void;
@@ -23,25 +23,27 @@ interface ServicesSectionProps {
 export default function ServicesSection({
   onOpenQuoteWithService,
 }: ServicesSectionProps) {
-  const [activeModalService, setActiveModalService] = useState<Service | null>(null);
+  const [activeModalService, setActiveModalService] = useState<Service | null>(
+    null,
+  );
 
   const getServiceIcon = (iconName: string) => {
     switch (iconName) {
-      case 'globe':
+      case "globe":
         return <Globe className="w-6 h-6 transition-colors" />;
-      case 'smartphone':
+      case "smartphone":
         return <Smartphone className="w-6 h-6 transition-colors" />;
-      case 'pen-tool':
+      case "pen-tool":
         return <PenTool className="w-6 h-6 transition-colors" />;
-      case 'video':
+      case "video":
         return <Video className="w-6 h-6 transition-colors" />;
-      case 'megaphone':
+      case "megaphone":
         return <Megaphone className="w-6 h-6 transition-colors" />;
-      case 'network':
+      case "network":
         return <Network className="w-6 h-6 transition-colors" />;
-      case 'user-check':
+      case "user-check":
         return <UserCheck className="w-6 h-6 transition-colors" />;
-      case 'sparkles':
+      case "sparkles":
         return <Sparkles className="w-6 h-6 transition-colors" />;
       default:
         return <Sparkles className="w-6 h-6 transition-colors" />;
@@ -54,7 +56,6 @@ export default function ServicesSection({
       className="bg-white text-slate-900 py-20 lg:py-28 relative z-10 border-b border-slate-200/60"
     >
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Section Header */}
         <div className="mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4 font-['Plus_Jakarta_Sans']">
@@ -62,7 +63,8 @@ export default function ServicesSection({
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-3xl font-normal">
-            Whether you&apos;re launching, growing, or scaling, our services are engineered for measurable ROI and seamless execution.
+            Whether you&apos;re launching, growing, or scaling, our services are
+            engineered for measurable ROI and seamless execution.
           </p>
         </div>
 
@@ -104,7 +106,6 @@ export default function ServicesSection({
             </div>
           ))}
         </div>
-
       </div>
 
       {/* Service Detail Modal */}
@@ -120,13 +121,22 @@ export default function ServicesSection({
               <span>Guaranteed Delivery & SLA</span>
             </div>
 
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">{activeModalService.title}</h3>
-            <p className="text-slate-600 text-sm mb-6 leading-relaxed">{activeModalService.description}</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">
+              {activeModalService.title}
+            </h3>
+            <p className="text-slate-600 text-sm mb-6 leading-relaxed">
+              {activeModalService.description}
+            </p>
 
-            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Core Deliverables & Strategy</h4>
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+              Core Deliverables & Strategy
+            </h4>
             <div className="space-y-2.5 mb-8">
               {activeModalService.features.map((f) => (
-                <div key={f} className="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-xl text-sm font-medium text-slate-800 border border-slate-100">
+                <div
+                  key={f}
+                  className="flex items-center gap-3 p-3.5 bg-slate-50/80 rounded-xl text-sm font-medium text-slate-800 border border-slate-100"
+                >
                   <CheckCircle2 className="w-4.5 h-4.5 text-indigo-600 flex-shrink-0" />
                   <span>{f}</span>
                 </div>
@@ -159,5 +169,3 @@ export default function ServicesSection({
     </section>
   );
 }
-
-

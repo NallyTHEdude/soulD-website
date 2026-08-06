@@ -1,21 +1,21 @@
 import { CSSProperties, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import BuyNowModal from "./components/BuyNowModal";
-import CustomizeDrawer from "./components/CustomizeDrawer";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import QuoteModal from "./components/QuoteModal";
-import ScrollToTop from "./components/ScrollToTop";
-import SearchModal from "./components/SearchModal";
+import Footer from "../components/layout/Footer";
+import Header from "../components/layout/Header";
+import ScrollToTop from "../components/layout/ScrollToTop";
+import BuyNowModal from "../components/modals/BuyNowModal";
+import CustomizeDrawer from "../components/modals/CustomizeDrawer";
+import QuoteModal from "../components/modals/QuoteModal";
+import SearchModal from "../components/modals/SearchModal";
 
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import HomePage from "./pages/HomePage";
-import ServiceProjectsPage from "./pages/ServiceProjectsPage";
-import ServicesPage from "./pages/ServicesPage";
-import WorkPage from "./pages/WorkPage";
+import AboutPage from "../pages/AboutPage";
+import ContactPage from "../pages/ContactPage";
+import HomePage from "../pages/HomePage";
+import ServiceProjectsPage from "../pages/ServiceProjectsPage";
+import ServicesPage from "../pages/ServicesPage";
+import WorkPage from "../pages/WorkPage";
 
-import { ThemeConfig } from "./types";
+import { ThemeConfig } from "../types";
 
 export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);

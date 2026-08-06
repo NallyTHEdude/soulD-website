@@ -1,5 +1,5 @@
-import { X, Check, RotateCcw, Sparkles } from 'lucide-react';
-import { ThemeConfig } from '../types';
+import { Check, RotateCcw, Sparkles, X } from "lucide-react";
+import { ThemeConfig } from "../../types";
 
 interface CustomizeDrawerProps {
   isOpen: boolean;
@@ -19,24 +19,23 @@ export default function CustomizeDrawer({
   if (!isOpen) return null;
 
   const colorPresets = [
-    { name: 'Delectus Blue', value: '#3B52F6' },
-    { name: 'Indigo Royal', value: '#4F46E5' },
-    { name: 'Emerald Growth', value: '#059669' },
-    { name: 'Violet Spark', value: '#7C3AED' },
-    { name: 'Rose Sunset', value: '#E11D48' },
+    { name: "Delectus Blue", value: "#3B52F6" },
+    { name: "Indigo Royal", value: "#4F46E5" },
+    { name: "Emerald Growth", value: "#059669" },
+    { name: "Violet Spark", value: "#7C3AED" },
+    { name: "Rose Sunset", value: "#E11D48" },
   ];
 
   const radiusOptions = [
-    { name: 'Rounded (Default)', value: '1rem' },
-    { name: 'Pill Soft', value: '1.5rem' },
-    { name: 'Modern Sharp', value: '0.375rem' },
+    { name: "Rounded (Default)", value: "1rem" },
+    { name: "Pill Soft", value: "1.5rem" },
+    { name: "Modern Sharp", value: "0.375rem" },
   ];
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden bg-slate-950/60 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
         <div className="w-screen max-w-md bg-slate-900 border-l border-slate-800 text-white shadow-2xl p-6 flex flex-col justify-between">
-          
           <div>
             {/* Header */}
             <div className="flex items-center justify-between pb-6 border-b border-slate-800">
@@ -45,8 +44,12 @@ export default function CustomizeDrawer({
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-white">Live Theme Customizer</h3>
-                  <p className="text-xs text-slate-400">Personalize color theme and aesthetics</p>
+                  <h3 className="font-bold text-lg text-white">
+                    Live Theme Customizer
+                  </h3>
+                  <p className="text-xs text-slate-400">
+                    Personalize color theme and aesthetics
+                  </p>
                 </div>
               </div>
               <button
@@ -60,7 +63,6 @@ export default function CustomizeDrawer({
 
             {/* Customization Options */}
             <div className="py-6 space-y-6">
-              
               {/* Accent Color Palette */}
               <div>
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
@@ -74,8 +76,8 @@ export default function CustomizeDrawer({
                       onClick={() => onUpdateTheme({ primaryColor: c.value })}
                       className={`flex items-center justify-between p-3 rounded-xl border text-xs font-medium transition-all ${
                         theme.primaryColor === c.value
-                          ? 'bg-slate-800 border-blue-500 text-white'
-                          : 'bg-slate-800/40 border-slate-800 text-slate-300 hover:border-slate-700'
+                          ? "bg-slate-800 border-blue-500 text-white"
+                          : "bg-slate-800/40 border-slate-800 text-slate-300 hover:border-slate-700"
                       }`}
                     >
                       <div className="flex items-center gap-3">
@@ -85,7 +87,9 @@ export default function CustomizeDrawer({
                         />
                         <span>{c.name}</span>
                       </div>
-                      {theme.primaryColor === c.value && <Check className="w-4 h-4 text-blue-400" />}
+                      {theme.primaryColor === c.value && (
+                        <Check className="w-4 h-4 text-blue-400" />
+                      )}
                     </button>
                   ))}
                 </div>
@@ -104,11 +108,11 @@ export default function CustomizeDrawer({
                       onClick={() => onUpdateTheme({ borderRadius: r.value })}
                       className={`p-2.5 rounded-xl border text-xs font-medium text-center transition-all ${
                         theme.borderRadius === r.value
-                          ? 'bg-blue-600 border-blue-500 text-white font-bold'
-                          : 'bg-slate-800/40 border-slate-800 text-slate-400 hover:bg-slate-800'
+                          ? "bg-blue-600 border-blue-500 text-white font-bold"
+                          : "bg-slate-800/40 border-slate-800 text-slate-400 hover:bg-slate-800"
                       }`}
                     >
-                      {r.name.split(' ')[0]}
+                      {r.name.split(" ")[0]}
                     </button>
                   ))}
                 </div>
@@ -125,8 +129,8 @@ export default function CustomizeDrawer({
                     onClick={() => onUpdateTheme({ darkMode: false })}
                     className={`py-2.5 px-3 rounded-xl border text-xs font-semibold text-center transition-all ${
                       !theme.darkMode
-                        ? 'bg-white text-slate-900 border-white shadow-md'
-                        : 'bg-slate-800/40 text-slate-400 border-slate-800'
+                        ? "bg-white text-slate-900 border-white shadow-md"
+                        : "bg-slate-800/40 text-slate-400 border-slate-800"
                     }`}
                   >
                     Light Theme
@@ -136,15 +140,14 @@ export default function CustomizeDrawer({
                     onClick={() => onUpdateTheme({ darkMode: true })}
                     className={`py-2.5 px-3 rounded-xl border text-xs font-semibold text-center transition-all ${
                       theme.darkMode
-                        ? 'bg-blue-600 text-white border-blue-500 shadow-md'
-                        : 'bg-slate-800/40 text-slate-400 border-slate-800'
+                        ? "bg-blue-600 text-white border-blue-500 shadow-md"
+                        : "bg-slate-800/40 text-slate-400 border-slate-800"
                     }`}
                   >
                     Dark Theme
                   </button>
                 </div>
               </div>
-
             </div>
           </div>
 
@@ -166,7 +169,6 @@ export default function CustomizeDrawer({
               Apply Settings
             </button>
           </div>
-
         </div>
       </div>
     </div>

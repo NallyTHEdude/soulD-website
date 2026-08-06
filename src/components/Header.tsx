@@ -49,7 +49,7 @@ export default function Header({
     if (onSelectService) onSelectService(serviceId);
     setServicesDropdownOpen(false);
     setMobileMenuOpen(false);
-    navigate("/services");
+    navigate(`/services/${serviceId}`);
   };
 
   const navItemClass = ({ isActive }: { isActive: boolean }) =>

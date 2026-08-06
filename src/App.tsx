@@ -1,34 +1,38 @@
-import { useState, CSSProperties } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import QuoteModal from './components/QuoteModal';
-import SearchModal from './components/SearchModal';
-import CustomizeDrawer from './components/CustomizeDrawer';
-import BuyNowModal from './components/BuyNowModal';
-import FloatingWidgets from './components/FloatingWidgets';
+import { CSSProperties, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BuyNowModal from "./components/BuyNowModal";
+import CustomizeDrawer from "./components/CustomizeDrawer";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import QuoteModal from "./components/QuoteModal";
+import ScrollToTop from "./components/ScrollToTop";
+import SearchModal from "./components/SearchModal";
 
-import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import WorkPage from './pages/WorkPage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import HomePage from "./pages/HomePage";
+import ServiceProjectsPage from "./pages/ServiceProjectsPage";
+import ServicesPage from "./pages/ServicesPage";
+import WorkPage from "./pages/WorkPage";
 
-import { ThemeConfig } from './types';
+import { ThemeConfig } from "./types";
 
 export default function App() {
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isCustomizeOpen, setIsCustomizeOpen] = useState(false);
   const [isBuyNowOpen, setIsBuyNowOpen] = useState(false);
-  const [selectedServiceTitle, setSelectedServiceTitle] = useState<string | undefined>(undefined);
-  const [selectedServiceId, setSelectedServiceId] = useState<string | undefined>(undefined);
+  const [selectedServiceTitle, setSelectedServiceTitle] = useState<
+    string | undefined
+  >(undefined);
+  const [selectedServiceId, setSelectedServiceId] = useState<
+    string | undefined
+  >(undefined);
 
   const [theme, setTheme] = useState<ThemeConfig>({
-    primaryColor: '#3B52F6',
-    fontFamily: 'Plus Jakarta Sans',
-    borderRadius: '1rem',
+    primaryColor: "#3B52F6",
+    fontFamily: "Plus Jakarta Sans",
+    borderRadius: "1rem",
     darkMode: false,
   });
 
@@ -38,9 +42,9 @@ export default function App() {
 
   const handleResetTheme = () => {
     setTheme({
-      primaryColor: '#3B52F6',
-      fontFamily: 'Plus Jakarta Sans',
-      borderRadius: '1rem',
+      primaryColor: "#3B52F6",
+      fontFamily: "Plus Jakarta Sans",
+      borderRadius: "1rem",
       darkMode: false,
     });
   };
@@ -60,11 +64,13 @@ export default function App() {
       <ScrollToTop />
       <div
         className={`min-h-screen flex flex-col transition-colors duration-300 ${
-          theme.darkMode ? 'bg-slate-950 text-slate-100' : 'bg-white text-slate-900'
+          theme.darkMode
+            ? "bg-slate-950 text-slate-100"
+            : "bg-white text-slate-900"
         }`}
         style={
           {
-            '--primary-color': theme.primaryColor,
+            "--primary-color": theme.primaryColor,
           } as CSSProperties
         }
       >
@@ -96,6 +102,10 @@ export default function App() {
                   onOpenQuoteWithService={handleOpenQuoteWithService}
                 />
               }
+            />
+            <Route
+              path="/services/:serviceId"
+              element={<ServiceProjectsPage onOpenQuote={handleOpenQuote} />}
             />
             <Route
               path="/work"

@@ -151,14 +151,14 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </h4>
             <div className="space-y-2.5 text-[20px]">
               <a
-                href="mailto:soul.d.digitalmarketingsolutions@gmail.com"
+                href="mailto:hello@soulddigitalmarketing.com"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-[#0444C0] transition-colors break-all"
               >
                 <Globe className="w-5 h-5 text-[#0555F0] flex-shrink-0" />
                 <span>www.soulddigitalmarketing.com</span>
               </a>
               <a
-                href="mailto:soul.d.digitalmarketingsolutions@gmail.com"
+                href="mailto:hello@soulddigitalmarketing.com"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-[#0444C0] transition-colors break-all"
               >
                 <Mail className="w-5 h-5 text-[#0555F0] flex-shrink-0" />

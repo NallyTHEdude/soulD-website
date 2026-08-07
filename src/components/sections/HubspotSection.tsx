@@ -27,7 +27,7 @@ export default function HubspotSection({
           push the split closer to the vertical middle of the cards). */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-[240px] inset-x-0 h-[240px] bg-[#f8f9fe]"
+        className="pointer-events-none absolute -top-60 inset-x-0 h-60 bg-[#f8f9fe]"
       />
 
       {/* Stats bar */}
@@ -52,19 +52,19 @@ export default function HubspotSection({
 
             <div className="grid grid-cols-2 gap-4 pt-2 pb-2">
               <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
-                <Smartphone className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+                <Smartphone className="w-4 h-4 text-[#0555F0] shrink-0" />
                 <span>Web & Mobile Apps</span>
               </div>
               <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
-                <Megaphone className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+                <Megaphone className="w-4 h-4 text-[#0555F0] shrink-0" />
                 <span>Meta & Google Ads</span>
               </div>
               <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
-                <Clapperboard className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+                <Clapperboard className="w-4 h-4 text-[#0555F0] shrink-0" />
                 <span>Video Editing & Reels</span>
               </div>
               <div className="flex items-center gap-2.5 text-md text-slate-700 font-medium">
-                <BadgeDollarSign className="w-4 h-4 text-[#0555F0] flex-shrink-0" />
+                <BadgeDollarSign className="w-4 h-4 text-[#0555F0] shrink-0" />
                 <span>Reasonable Pricing</span>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function HubspotSection({
               <button
                 type="button"
                 onClick={onTryGenerator}
-                className="inline-flex items-center gap-2.5 bg-gradient-to-r from-[#0555F0] to-[#4F46E5] hover:from-[#0444C0] hover:to-[#4338CA] text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2.5 bg-linear-to-r from-[#0555F0] to-[#4F46E5] hover:from-[#0444C0] hover:to-[#4338CA] text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{HUBSPOT_DATA.ctaText}</span>
                 <Sparkles className="w-4 h-4 text-indigo-200" />
@@ -93,23 +93,23 @@ export default function HubspotSection({
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-lg">
               {/* Top Larger Image Card */}
-              <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white aspect-[4/3] w-full ml-auto group relative">
+              <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white aspect-4/3 w-full ml-auto group relative">
                 <img
                   src={HUBSPOT_DATA.image1}
                   alt="Team collaboration on HubSpot website"
                   className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-40" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/20 via-transparent to-transparent opacity-40" />
               </div>
 
               {/* Bottom Left Overlapping Smaller Image Card */}
-              <div className="absolute -bottom-8 sm:-bottom-10 -left-6 sm:-left-12 w-8/12 sm:w-7/12 rounded-2xl overflow-hidden shadow-2xl border-2 border-indigo-100 bg-white aspect-[4/3] z-10 group">
+              <div className="absolute -bottom-8 sm:-bottom-10 left-0 sm:-left-12 w-7/12 sm:w-7/12 rounded-2xl overflow-hidden shadow-2xl border-2 border-indigo-100 bg-white aspect-4/3 z-10 group">
                 <img
                   src={HUBSPOT_DATA.image2}
                   alt="Focused marketer creating drag-and-drop website"
                   className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent opacity-30" />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/20 via-transparent to-transparent opacity-30" />
               </div>
 
               {/* Glow Accent */}

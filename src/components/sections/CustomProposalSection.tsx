@@ -17,6 +17,7 @@ export default function CustomProposalSection() {
     phone: "",
     company: "",
     service: SERVICES_DATA[0]?.title ?? "Website Development",
+    budget: "",
     message: "",
   });
 
@@ -236,6 +237,26 @@ export default function CustomProposalSection() {
                         <option key={service.id}>{service.title}</option>
                       ))}
                     </select>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="proposal-budget"
+                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                    >
+                      Estimated Budget (INR)
+                    </label>
+                    <input
+                      id="proposal-budget"
+                      type="text"
+                      inputMode="numeric"
+                      value={formData.budget}
+                      onChange={(e) =>
+                        setFormData({ ...formData, budget: e.target.value })
+                      }
+                      placeholder="e.g. 50000"
+                      className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-900 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 focus:bg-white transition-colors"
+                    />
                   </div>
 
                   <div>

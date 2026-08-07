@@ -29,7 +29,7 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
         />
 
         {/* Lighter Indigo/Royal Blue Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1e1b4b]/80 via-[#2e2a72]/70 to-[#221c4a]/60" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#1e1b4b]/80 via-[#2e2a72]/70 to-[#221c4a]/60" />
 
         {/* Geometric Diagonal Polygon Facets (Right Side Shapes) */}
         <div
@@ -64,11 +64,11 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
       <div className="justify-center relative max-w-full mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 sm:pt-16">
         <div className="max-w-10xl mx-auto text-center ">
           {/* Heading */}
-          <h1 className="text-7xl sm:text-[76px] leading-[85px] font-extrabold text-white tracking-tight mb-4">
+          <h1 className="text-4xl sm:text-6xl lg:text-[76px] leading-tight sm:leading-[1.05] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
             {" "}
             Elevate Your Brand with Soul-D
           </h1>
-          <h1 className="text-7xl sm:text-[65px] leading-[70px] font-extrabold text-white tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-5xl lg:text-[65px] leading-tight sm:leading-[1.08] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
             The Best{" "}
             <span className="inline-flex text-[#0555F0]">
               Digital Marketing Solutions

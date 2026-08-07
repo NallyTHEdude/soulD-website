@@ -1,17 +1,28 @@
-import {Facebook,Instagram,Linkedin,Mail,MapPin,Phone,Twitter,Youtube,Globe,} from "lucide-react";
+import {
+  Facebook,
+  Globe,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 import souldLogo from "../../../assets/sould-logo.png";
+
 interface FooterProps {
   onOpenQuote: () => void;
 }
+
 export default function Footer({ onOpenQuote }: FooterProps) {
   return (
     <footer className="footer relative z-10 bg-[#090b14] text-slate-400 pt-20 pb-12 border-t border-slate-800/80">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
-          
-          {/* Brand Info */}
-          <div className="lg:col-span-2 space-y-4">
+      <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row flex-wrap justify-center gap-30 mb-16">
+          {/* Company Details */}
+          <div className="w-full lg:w-auto lg:max-w-sm space-y-4">
             <Link
               to="/"
               className="inline-flex items-center group transition-transform hover:opacity-95"
@@ -71,12 +82,12 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </div>
           </div>
 
-          {/* Column 3: Services – 2 columns */}
-          <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-white font-bold text-xl uppercase tracking-widest text-[#0555F0]">
+          {/* Our Services */}
+          <div className="w-full lg:w-auto space-y-3">
+            <h4 className="font-bold text-xl uppercase tracking-widest text-[#0555F0]">
               Our Services
             </h4>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-[20px] leading-relaxed">
+            <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-[20px] leading-relaxed">
               <li>
                 <Link
                   to="/services"
@@ -144,9 +155,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
-          <div className="space-y-4 min-w-sm">
-            <h4 className="text-white font-bold text-xl uppercase tracking-widest text-[#0555F0]">
+          {/* Get in Touch */}
+          <div className="w-full lg:w-auto lg:max-w-sm space-y-4">
+            <h4 className="font-bold text-xl uppercase tracking-widest text-[#0555F0]">
               Get in Touch
             </h4>
             <div className="space-y-2.5 text-[20px]">
@@ -154,25 +165,25 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 href="mailto:hello@soulddigitalmarketing.com"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-[#0444C0] transition-colors break-all"
               >
-                <Globe className="w-5 h-5 text-[#0555F0] flex-shrink-0" />
+                <Globe className="w-5 h-5 text-[#0555F0] shrink-0" />
                 <span>www.soulddigitalmarketing.com</span>
               </a>
               <a
                 href="mailto:hello@soulddigitalmarketing.com"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-[#0444C0] transition-colors break-all"
               >
-                <Mail className="w-5 h-5 text-[#0555F0] flex-shrink-0" />
+                <Mail className="w-5 h-5 text-[#0555F0] shrink-0" />
                 <span>hello@soulddigitalmarketing.com</span>
               </a>
               <a
                 href="tel:+919866500578"
                 className="flex items-center gap-2.5 text-slate-300 hover:text-[#0444C0] transition-colors"
               >
-                <Phone className="w-5 h-5 text-[#0555F0] flex-shrink-0" />
+                <Phone className="w-5 h-5 text-[#0555F0] shrink-0" />
                 <span>+91 9866500578</span>
               </a>
               <div className="flex items-center gap-2.5 text-slate-300">
-                <MapPin className="w-5 h-5 text-[#0555F0] flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-[#0555F0] shrink-0" />
                 <span>
                   Suncity, Near Vantage Line Mall, Bandlaguda Jagir, Hyderabad -
                   91
@@ -181,6 +192,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
             </div>
           </div>
         </div>
+
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-900/80 flex flex-col sm:flex-row items-center justify-center gap-4 text-xl text-slate-500">
           <div className="">

@@ -5,7 +5,7 @@ export const COMPANY_DETAILS = {
   shortName: "Soul-D.",
   tagline: "Digital Marketing Solutions at Reasonable Rates",
   phone: "+91 9866500578",
-  email: "soul.d.digitalmarketingsolutions@gmail.com",
+  email: "hello@soulddigitalmarketing.com",
   address: "India",
 };
 

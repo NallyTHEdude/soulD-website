@@ -1,4 +1,6 @@
 import { ReviewMetric, Service } from "../types";
+import hubspotImage1 from "../../assets/hubspot_image_1.jpg";
+import hubspotImage2 from "../../assets/hubspot_image_2.jpg";
 
 export const COMPANY_DETAILS = {
   name: "Soul-D. | Digital Marketing Solutions",
@@ -25,9 +27,11 @@ export const HUBSPOT_DATA = {
     "Whether you need a custom responsive website, a feature-packed mobile app, or an executive brand portfolio, Soul-D. combines creative design and modern technology to launch your brand effortlessly.",
   ctaText: "Explore Web & App Solutions",
   image1:
-    "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
+    // "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
+    hubspotImage1,
   image2:
-    "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&crop=faces",
+    // "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&crop=faces",
+    hubspotImage2,
 };
 
 export const WHAT_WE_DO_DATA = {

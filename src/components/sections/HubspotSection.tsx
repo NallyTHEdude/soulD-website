@@ -103,11 +103,11 @@ export default function HubspotSection({
               </div>
 
               {/* Bottom Left Overlapping Smaller Image Card */}
-              <div className="absolute -bottom-8 sm:-bottom-10 left-0 sm:-left-12 w-7/12 sm:w-7/12 rounded-2xl overflow-hidden shadow-2xl border-2 border-indigo-100 bg-white aspect-4/3 z-10 group">
+              <div className="absolute -bottom-8 sm:-bottom-10 left-0 sm:-left-12 w-7/12 sm:w-7/12 rounded-2xl overflow-hidden shadow-2xl border border-indigo-100 bg-white aspect-4/3 z-10 group">
                 <img
                   src={HUBSPOT_DATA.image2}
                   alt="Focused marketer creating drag-and-drop website"
-                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-[25%_10%] transform group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-slate-950/20 via-transparent to-transparent opacity-30" />
               </div>

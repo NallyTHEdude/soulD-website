@@ -34,7 +34,7 @@ export default function HubspotSection({
       <StatsBar />
 
       {/* Background Subtle Gradient Mesh */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(99,102,241,0.08),rgba(255,255,255,0))]" />
+      <div className="absolute inset-0 bg-[#f8f9fe]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

@@ -21,9 +21,49 @@ export default function CustomProposalSection() {
     message: "",
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/hello@soulddigitalmarketing.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: formData.company,
+            service: formData.service,
+            budget: formData.budget,
+            message: formData.message,
+          }),
+        },
+      );
+
+      const data = await response.json();
+
+      if (data.success === "true" || response.ok) {
+        setSubmitted(true);
+
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          service: SERVICES_DATA[0]?.title ?? "Website Development",
+          budget: "",
+          message: "",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
@@ -107,7 +147,7 @@ export default function CustomProposalSection() {
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
                     Thank you{formData.name ? `, ${formData.name}` : ""}.
-                    Soul-D. will review your requirements and contact you at{" "}
+                    Soul-D will review your requirements and contact you at{" "}
                     {formData.email || formData.phone}.
                   </p>
                   <button

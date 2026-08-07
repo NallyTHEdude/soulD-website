@@ -9,14 +9,16 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import souldLogo from "../../../assets/sould-logo.png";
+import { SERVICES_DATA } from "../../data";
 
 interface FooterProps {
   onOpenQuote: () => void;
 }
 
 export default function Footer({ onOpenQuote }: FooterProps) {
+  const navigate = useNavigate();
   return (
     <footer className="footer relative z-10 bg-[#090b14] text-slate-400 pt-20 pb-12 border-t border-slate-800/80">
       <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,70 +90,16 @@ export default function Footer({ onOpenQuote }: FooterProps) {
               Our Services
             </h4>
             <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-[20px] leading-relaxed">
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Website Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Mobile App Development
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Content Creation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Video Production & Editing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Social Media Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Google Ads & Meta Ads
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Personal Branding Portfolios
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/services"
-                  className="hover:text-[#0444C0] transition-colors"
-                >
-                  Product/Service Branding
-                </Link>
-              </li>
+              {SERVICES_DATA.map((service) => (
+                <li key={service.id}>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="hover:text-[#0444C0] transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

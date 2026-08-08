@@ -22,7 +22,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
   return (
     <footer className="footer relative z-10 bg-[#090b14] text-slate-400 pt-20 pb-12 border-t border-slate-800/80">
       <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row flex-wrap justify-center gap-30 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 lg:gap-x-16 justify-items-center mb-16">
           {/* Company Details */}
           <div className="w-full lg:w-auto lg:max-w-sm space-y-4">
             <Link

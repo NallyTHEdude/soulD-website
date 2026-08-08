@@ -70,18 +70,20 @@ export default function Header({
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link
-            to="/"
-            className="flex items-center group transition-transform hover:opacity-95"
-            aria-label="Soul-D. home"
-          >
-            <img
-              src={souldLogo}
-              alt="Soul-D."
-              className="h-11 sm:h-17 w-auto object-contain rounded-lg transition-transform group-hover:scale-102"
-            />
-          </Link>
-
+          <div>
+            <Link
+              to="/"
+              className="flex items-center group transition-transform hover:opacity-95"
+              aria-label="Soul-D. home"
+            >
+              <img
+                src={souldLogo}
+                alt="Soul-D."
+                className="h-11 sm:h-17 w-auto object-contain rounded-lg transition-transform group-hover:scale-102"
+              />
+            </Link>
+            <span className="text-white text-[21px] ml-2 logo-text">Digital Marketing Solutions</span>
+          </div>
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center space-x-8 text-lg font-medium">
             <NavLink to="/" end className={navItemClass}>
@@ -132,7 +134,7 @@ export default function Header({
             </NavLink>
 
             <NavLink to="/about" className={navItemClass}>
-              About
+              About Us
             </NavLink>
 
             <NavLink to="/contact" className={navItemClass}>

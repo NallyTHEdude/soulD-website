@@ -20,7 +20,7 @@ const StatsBar = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5 sm:gap-8 text-center">
             {stats.map((st) => (
               <div key={st.label}>
-                <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-indigo-600 block mb-1 font-['Plus_Jakarta_Sans']">
+                <span className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-[#0555F0] block mb-1 font-['Plus_Jakarta_Sans']">
                   <CountUp
                     end={st.value}
                     duration={1.5}

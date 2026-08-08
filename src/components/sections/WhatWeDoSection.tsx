@@ -25,8 +25,10 @@ export default function WhatWeDoSection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
           <div className="max-w-2xl">
             <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-[1.12] font-['Plus_Jakarta_Sans']">
-              Marketing That Actually <br className="hidden sm:inline" />
-              <span className="text-[#0555F0]">Moves the Needle</span>
+              Strategies that Turn <br className="hidden sm:inline" />
+              <span className="text-[#0555F0]">
+                Attention <span className="text-[#ffffff]">into</span> Growth
+              </span>
             </h2>
           </div>
 

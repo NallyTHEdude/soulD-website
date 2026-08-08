@@ -1,6 +1,7 @@
 import { ReviewMetric, Service } from "../types";
 import hubspotImage1 from "../../assets/hubspot_image_1.jpg";
 import hubspotImage2 from "../../assets/hubspot_image_2.jpg";
+import hubspotImage3 from "../../assets/hubspot_image_3.jpg";
 
 export const COMPANY_DETAILS = {
   name: "Soul-D. | Digital Marketing Solutions",
@@ -31,7 +32,8 @@ export const HUBSPOT_DATA = {
     hubspotImage1,
   image2:
     // "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop&crop=faces",
-    hubspotImage2,
+    // hubspotImage2,
+    hubspotImage3,
 };
 
 export const WHAT_WE_DO_DATA = {

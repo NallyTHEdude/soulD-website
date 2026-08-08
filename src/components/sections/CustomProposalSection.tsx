@@ -89,44 +89,44 @@ export default function CustomProposalSection() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3">
               <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/15 text-indigo-200 border border-indigo-400/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/15 text-[#0555F0] border border-indigo-400/20 flex items-center justify-center flex-shrink-0">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white mb-1">
+                  <h3 className="text-base font-bold text-white mb-1">
                     Tailored Scope
                   </h3>
-                  <p className="text-xs leading-relaxed text-slate-400">
+                  <p className="text-base leading-relaxed text-slate-400">
                     Services mapped to your stage, goals, and budget.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/15 text-indigo-200 border border-indigo-400/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/15 text-[#0555F0] border border-indigo-400/20 flex items-center justify-center flex-shrink-0">
                   <Clock3 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white mb-1">
+                  <h3 className="text-base font-bold text-white mb-1">
                     Fast Review
                   </h3>
-                  <p className="text-xs leading-relaxed text-slate-400">
+                  <p className="text-base leading-relaxed text-slate-400">
                     Expect a response within 2 to 4 business hours.
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                <div className="w-10 h-10 rounded-xl bg-indigo-500/15 text-indigo-200 border border-indigo-400/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-indigo-500/15 text-[#0555F0] border border-indigo-400/20 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white mb-1">
+                  <h3 className="text-base font-bold text-white mb-1">
                     Direct Contact
                   </h3>
                   <a
                     href={`mailto:${COMPANY_DETAILS.email}`}
-                    className="text-xs leading-relaxed text-slate-400 hover:text-indigo-200 transition-colors break-all"
+                    className="text-base leading-relaxed text-slate-400 hover:text-[#0555F0] transition-colors break-all"
                   >
                     {COMPANY_DETAILS.email}
                   </a>
@@ -146,8 +146,8 @@ export default function CustomProposalSection() {
                     Proposal Request Received
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed max-w-md mx-auto mb-6">
-                    Thank you{formData.name ? `, ${formData.name}` : ""}.
-                    Soul-D will review your requirements and contact you at{" "}
+                    Thank you{formData.name ? `, ${formData.name}` : ""}. Soul-D
+                    will review your requirements and contact you at{" "}
                     {formData.email || formData.phone}.
                   </p>
                   <button
@@ -164,7 +164,7 @@ export default function CustomProposalSection() {
                     <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 mb-1 font-['Plus_Jakarta_Sans']">
                       Get Custom Proposal
                     </h3>
-                    <p className="text-sm text-slate-500">
+                    <p className="text-base text-slate-500">
                       Tell us what you need and we will prepare a clear
                       next-step plan.
                     </p>
@@ -174,7 +174,7 @@ export default function CustomProposalSection() {
                     <div>
                       <label
                         htmlFor="proposal-name"
-                        className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                        className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                       >
                         Full Name *
                       </label>
@@ -194,7 +194,7 @@ export default function CustomProposalSection() {
                     <div>
                       <label
                         htmlFor="proposal-email"
-                        className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                        className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                       >
                         Email Address *
                       </label>
@@ -216,12 +216,12 @@ export default function CustomProposalSection() {
                     <div>
                       <label
                         htmlFor="proposal-phone"
-                        className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                        className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                       >
                         Phone Number *
                       </label>
                       <div className="relative">
-                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-indigo-600" />
+                        <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#0555F0]" />
                         <input
                           id="proposal-phone"
                           type="tel"
@@ -239,7 +239,7 @@ export default function CustomProposalSection() {
                     <div>
                       <label
                         htmlFor="proposal-company"
-                        className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                        className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                       >
                         Company / Brand
                       </label>
@@ -259,7 +259,7 @@ export default function CustomProposalSection() {
                   <div>
                     <label
                       htmlFor="proposal-service"
-                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                      className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                     >
                       Service *
                     </label>
@@ -282,7 +282,7 @@ export default function CustomProposalSection() {
                   <div>
                     <label
                       htmlFor="proposal-budget"
-                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                      className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                     >
                       Estimated Budget (INR)
                     </label>
@@ -302,7 +302,7 @@ export default function CustomProposalSection() {
                   <div>
                     <label
                       htmlFor="proposal-message"
-                      className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2"
+                      className="block text-base font-bold uppercase tracking-wider text-slate-700 mb-2"
                     >
                       Project Details *
                     </label>
@@ -324,7 +324,9 @@ export default function CustomProposalSection() {
                     className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#0555F0] hover:bg-[#0444C0] text-white font-bold text-sm py-4 shadow-lg shadow-indigo-600/25 transition-all"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Submit Your Request </span>
+                    <span className="text-lg font-bold uppercase">
+                      Submit Your Request{" "}
+                    </span>
                   </button>
                 </form>
               )}

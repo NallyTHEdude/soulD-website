@@ -1,16 +1,15 @@
 import { ArrowRight } from "lucide-react";
 import { HERO_DATA } from "../../data";
+import { useNavigate } from "react-router-dom";
 
 interface HeroSectionProps {
   onOpenQuote: () => void;
 }
 
 export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
+  const navigate = useNavigate();
   const handleLearnMore = () => {
-    const el = document.querySelector("#hubspot");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    navigate("/about");
   };
 
   return (
@@ -64,16 +63,17 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
       <div className="justify-center relative max-w-full mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 sm:pt-16">
         <div className="max-w-10xl mx-auto text-center ">
           {/* Heading */}
-          <h1 className="text-4xl sm:text-6xl lg:text-[76px] leading-tight sm:leading-[1.05] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
+          <h1 className="text-[40px] sm:text-6xl lg:text-[76px] leading-tight sm:leading-[1.05] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
             {" "}
-            Elevate Your Brand with Soul-D
+            Elevate Your Brand with Soul-D.
           </h1>
-          <h1 className="text-3xl sm:text-5xl lg:text-[65px] leading-tight sm:leading-[1.08] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
+          <h1 className="text-[40px] sm:text-5xl lg:text-[90px] leading-tight sm:leading-[1.08] text-white tracking-tight mb-4 wrap-break-word">
             The Best{" "}
-            <span className="inline-flex text-[#0555F0]">
-              Digital Marketing Solutions
+            <span className="inline-flex text-[#0555F0] font-extrabold">
+              Digital Marketing 
             </span>
             <br />
+            <span className='text-[#0555F0] font-extrabold'>Agency </span>
             in Hyderabad
           </h1>
 
@@ -90,7 +90,7 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
             <button
               type="button"
               onClick={handleLearnMore}
-              className="group flex items-center gap-2.5 text-white hover:text-blue-300 font-medium text-base transition-colors py-2 px-1"
+              className="group flex items-center gap-2.5 text-white hover:text-[#0555F0] font-medium text-base transition-colors py-2 px-1"
             >
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform duration-200" />

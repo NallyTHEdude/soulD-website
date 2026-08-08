@@ -91,9 +91,9 @@ export default function HubspotSection({
 
           {/* Right Column Stacked Overlapping Image Cards */}
           <div className="lg:col-span-6 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-lg ">
               {/* Top Larger Image Card */}
-              <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white aspect-4/3 w-full ml-auto group relative">
+              <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-slate-200 bg-white aspect-4/4 w-full ml-auto group relative">
                 <img
                   src={HUBSPOT_DATA.image1}
                   alt="Team collaboration on HubSpot website"
@@ -103,7 +103,7 @@ export default function HubspotSection({
               </div>
 
               {/* Bottom Left Overlapping Smaller Image Card */}
-              <div className="absolute -bottom-8 sm:-bottom-10 left-0 sm:-left-12 w-7/12 sm:w-7/12 rounded-2xl overflow-hidden shadow-2xl border border-indigo-100 bg-white aspect-4/3 z-10 group">
+              <div className="absolute -bottom-8 sm:-bottom-10 left-0 sm:-left-12 w-7/12 sm:w-7/12 rounded-2xl overflow-hidden shadow-2xl border border-indigo-100 bg-white aspect-4/3.5 z-10 group">
                 <img
                   src={HUBSPOT_DATA.image2}
                   alt="Focused marketer creating drag-and-drop website"

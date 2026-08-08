@@ -104,8 +104,8 @@ export default function AwardsAndReviews() {
   const tickerItems = [...recognitions, ...recognitions];
 
   return (
-    <section id="our-work" className="relative z-10 bg-[#f8f9fe] pt-20 pb-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 text-center">
+    <section id="our-work" className="relative z-10 bg-[#f8f9fe] py-15 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-0 text-center">
 
         {/* Section Heading */}
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans'] mb-4">
@@ -117,13 +117,13 @@ export default function AwardsAndReviews() {
       </div>
 
       {/* Auto-Scrolling Horizontal Marquee Container */}
-      <div className="relative w-full overflow-hidden py-4">
+      {/* <div className="relative w-full overflow-hidden py-4"> */}
         {/* Gradient Overlay Mask for Smooth Fade Edges */}
-        <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#f8f9fe] to-transparent z-10 pointer-events-none" />
-        <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#f8f9fe] to-transparent z-10 pointer-events-none" />
+        {/* <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#f8f9fe] to-transparent z-10 pointer-events-none" /> */}
+        {/* <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#f8f9fe] to-transparent z-10 pointer-events-none" /> */}
 
         {/* Scrolling Strip */}
-        <div className="animate-marquee flex gap-6 items-center">
+        {/* <div className="animate-marquee flex gap-6 items-center">
           {tickerItems.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
@@ -157,8 +157,8 @@ export default function AwardsAndReviews() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
 
     </section>
   );

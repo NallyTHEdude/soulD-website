@@ -22,9 +22,9 @@ export default function Footer({ onOpenQuote }: FooterProps) {
   return (
     <footer className="footer relative z-10 bg-[#090b14] text-slate-400 pt-20 pb-12 border-t border-slate-800/80">
       <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12 lg:gap-x-16 justify-items-center mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-12 lg:gap-x-16 items-start mb-16">
           {/* Company Details */}
-          <div className="w-full lg:w-auto lg:max-w-sm space-y-4">
+          <div className="w-full lg:row-span-2 lg:justify-self-center lg:max-w-sm space-y-4">
             <Link
               to="/"
               className="inline-flex items-center group transition-transform hover:opacity-95"
@@ -85,11 +85,11 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           </div>
 
           {/* Our Services */}
-          <div className="w-full lg:w-auto space-y-3">
+          <div className="w-full space-y-3">
             <h4 className="font-bold text-xl uppercase tracking-widest text-[#0555F0]">
               Our Services
             </h4>
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-2 text-[20px] leading-relaxed">
+            <ul className="grid grid-cols-2 gap-y-2 text-[20px] ">
               {SERVICES_DATA.map((service) => (
                 <li key={service.id}>
                   <Link
@@ -104,7 +104,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
           </div>
 
           {/* Get in Touch */}
-          <div className="w-full lg:w-auto lg:max-w-sm space-y-4">
+          <div className="w-full lg:max-w-sm space-y-4">
             <h4 className="font-bold text-xl uppercase tracking-widest text-[#0555F0]">
               Get in Touch
             </h4>

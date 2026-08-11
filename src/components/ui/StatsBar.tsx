@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 const StatsBar = () => {
   const stats = [
     { label: "Projects Delivered", value: 100, suffix: "+" },
-    { label: "Client Retention Rate", value: 98, suffix: "%" },
+    { label: "Client Retention Rate", value: 88, suffix: "%" },
     { label: "Industries Covered", value: 10, suffix: "+" },
     { label: "Countries, Global Footprint", value: 3, suffix: "+" },
   ];

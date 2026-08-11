@@ -64,7 +64,6 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
         <div className="max-w-10xl mx-auto text-center ">
           {/* Heading */}
           <h1 className="text-[40px] sm:text-6xl lg:text-[76px] leading-tight sm:leading-[1.05] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
-            {" "}
             Elevate Your Brand with Soul-D.
           </h1>
           <h1 className="text-[40px] sm:text-5xl lg:text-[90px] leading-tight sm:leading-[1.08] text-white tracking-tight mb-4 wrap-break-word">

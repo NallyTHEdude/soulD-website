@@ -37,34 +37,38 @@ export default function FloatingContactButtons() {
   };
 
   return (
-    <div className="fixed left-5 bottom-6 z-50 flex flex-col gap-5">
+    <div className="fixed right-10 bottom-15 z-50 flex flex-col gap-5">
       {/* WhatsApp */}
-      <a
-        href="https://wa.me/919866500578"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with us on WhatsApp"
-        className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
-      >
-        <FaWhatsapp className="h-10 w-10" />
-      </a>
+      <div className="rounded-full shadow-lg transition-all duration-100">
+        <a
+          href="https://wa.me/919866500578"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Chat with us on WhatsApp"
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
+        >
+          <FaWhatsapp className="h-10 w-10" />
+        </a>
+      </div>
 
       {/* Phone */}
-      <div className="relative">
-        {copied && (
-          <div className="absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-2 text-xs font-medium text-white shadow-lg">
-            Contact number copied
-          </div>
-        )}
+      <div className="rounded-full shadow-lg transition-all duration-100">
+        <div className="relative">
+          {copied && (
+            <div className="absolute right-14 top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-slate-900 px-3 py-2 text-xs font-medium text-white shadow-lg">
+              Contact number copied
+            </div>
+          )}
 
-        <a
-          href={`tel:${mobilePhoneNumber}`}
-          onClick={handlePhoneClick}
-          aria-label="Call us"
-          className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0555F0] text-white shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
-        >
-          <Phone className="h-10 w-10" />
-        </a>
+          <a
+            href={`tel:${mobilePhoneNumber}`}
+            onClick={handlePhoneClick}
+            aria-label="Call us"
+            className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0555F0] text-white shadow-lg transition-all duration-200 hover:scale-110 hover:shadow-xl"
+          >
+            <Phone className="h-10 w-10" />
+          </a>
+      </div>
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ import BuyNowModal from "../components/modals/BuyNowModal";
 import CustomizeDrawer from "../components/modals/CustomizeDrawer";
 import QuoteModal from "../components/modals/QuoteModal";
 import SearchModal from "../components/modals/SearchModal";
+import FloatingContactButtons from "../components/layout/FloatingContactButtons";
 
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
@@ -136,6 +137,8 @@ export default function App() {
 
         {/* Agency Footer */}
         <Footer onOpenQuote={handleOpenQuote} />
+
+        <FloatingContactButtons />
 
         {/* Modals & Drawers */}
         <QuoteModal

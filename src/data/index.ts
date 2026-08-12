@@ -19,6 +19,13 @@ export const HERO_DATA = {
     "From website & mobile app development to video production, Meta & Google Ads, social media growth, and personal branding — Soul-D. delivers high-impact digital marketing solutions at reasonable rates.",
   heroBgImage:
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop",
+  heroImages: [
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop", // team meeting
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1920&auto=format&fit=crop", // office/analytics
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1920&auto=format&fit=crop", // laptop dashboard
+    "https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=1920&auto=format&fit=crop", // strategy/marketing
+    "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1920&auto=format&fit=crop", // creative team
+  ],
 };
 
 export const HUBSPOT_DATA = {

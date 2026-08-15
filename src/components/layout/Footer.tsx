@@ -49,7 +49,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 <Linkedin className="w-9 h-9" />
               </a>
               <a
-                href="https://www.instagram.com/soul.d.digitalmarketing"
+                href="https://www.instagram.com/soulddigitalmarketing"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Soul-D. on Instagram"

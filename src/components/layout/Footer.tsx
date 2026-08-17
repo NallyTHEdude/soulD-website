@@ -76,7 +76,7 @@ export default function Footer({ onOpenQuote }: FooterProps) {
                 <Youtube className="w-9 h-9" />
               </a>
               <a
-                href="#"
+                href="https://x.com/soul_d_digital"
                 className="w-16 h-16 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-indigo-500 hover:text-white flex items-center justify-center transition-all"
               >
                 <Twitter className="w-9 h-9" />

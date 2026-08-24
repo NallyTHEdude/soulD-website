@@ -44,17 +44,6 @@ export default function QuoteModal({
           <div className="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold">
             <FileText className="w-5 h-5" />
           </div>
-
-          <div>
-            <h3 className="text-xl font-extrabold text-slate-900">
-              Get a Custom Proposal
-            </h3>
-
-            <p className="text-xs text-slate-500">
-              Select services and leave your contact details for reasonable rate
-              estimates
-            </p>
-          </div>
         </div>
 
         {/* Reusable Form */}

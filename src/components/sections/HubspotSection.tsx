@@ -6,15 +6,13 @@ import {
   Smartphone,
   Sparkles,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { HUBSPOT_DATA } from "../../data";
 import StatsBar from "../ui/StatsBar";
-interface HubspotSectionProps {
-  onTryGenerator?: () => void;
-}
 
-export default function HubspotSection({
-  onTryGenerator,
-}: HubspotSectionProps) {
+export default function HubspotSection() {
+  const navigate = useNavigate();
+
   return (
     <section
       id="about"
@@ -72,7 +70,7 @@ export default function HubspotSection({
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 type="button"
-                onClick={onTryGenerator}
+                onClick={() => navigate("/services")}
                 className="inline-flex items-center gap-2.5 bg-linear-to-r from-[#0555F0] to-[#4F46E5] hover:from-[#0444C0] hover:to-[#4338CA] text-white font-semibold text-base px-8 py-4 rounded-xl transition-all duration-200 shadow-xl shadow-indigo-600/20 hover:shadow-indigo-600/30 hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{HUBSPOT_DATA.ctaText}</span>

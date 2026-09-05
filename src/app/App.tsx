@@ -1,5 +1,6 @@
 import { CSSProperties, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import FloatingContactButtons from "../components/layout/FloatingContactButtons";
 import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import ScrollToTop from "../components/layout/ScrollToTop";
@@ -7,7 +8,6 @@ import BuyNowModal from "../components/modals/BuyNowModal";
 import CustomizeDrawer from "../components/modals/CustomizeDrawer";
 import QuoteModal from "../components/modals/QuoteModal";
 import SearchModal from "../components/modals/SearchModal";
-import FloatingContactButtons from "../components/layout/FloatingContactButtons";
 
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
@@ -91,7 +91,6 @@ export default function App() {
                 <HomePage
                   onOpenQuote={handleOpenQuote}
                   onOpenQuoteWithService={handleOpenQuoteWithService}
-                  onOpenBuyNow={() => setIsBuyNowOpen(true)}
                   selectedServiceId={selectedServiceId}
                 />
               }
@@ -127,7 +126,6 @@ export default function App() {
                 <HomePage
                   onOpenQuote={handleOpenQuote}
                   onOpenQuoteWithService={handleOpenQuoteWithService}
-                  onOpenBuyNow={() => setIsBuyNowOpen(true)}
                   selectedServiceId={selectedServiceId}
                 />
               }

@@ -8,14 +8,12 @@ import InteractiveServices from "../components/ui/InteractiveService";
 interface HomePageProps {
   onOpenQuote: () => void;
   onOpenQuoteWithService: (serviceTitle: string) => void;
-  onOpenBuyNow: () => void;
   selectedServiceId?: string;
 }
 
 export default function HomePage({
   onOpenQuote,
   onOpenQuoteWithService,
-  onOpenBuyNow,
   selectedServiceId,
 }: HomePageProps) {
   return (
@@ -27,7 +25,7 @@ export default function HomePage({
       <InteractiveServices onOpenQuoteWithService={onOpenQuoteWithService} />
 
       {/* HubSpot Drag-and-Drop Section */}
-      <HubspotSection onTryGenerator={onOpenBuyNow} />
+      <HubspotSection />
 
       {/* What We Do Section */}
       <WhatWeDoSection />

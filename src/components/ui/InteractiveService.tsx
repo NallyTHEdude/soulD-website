@@ -108,7 +108,14 @@ export default function InteractiveServices({
                   {service.title}
                 </h3>
 
-                <p className="mt-2 text-sm leading-relaxed text-slate-200">
+                <p
+                  className="mt-2 overflow-hidden text-sm leading-relaxed text-slate-200"
+                  style={{
+                    display: "-webkit-box",
+                    WebkitBoxOrient: "vertical",
+                    WebkitLineClamp: 3,
+                  }}
+                >
                   {service.description}
                 </p>
 

@@ -96,7 +96,7 @@ export default function TrustedBySection() {
         </div>
       </div> */}
 
-      <div className="relative mb-16 w-full overflow-hidden border-y border-slate-200/80 bg-[#e9edf3] py-5">
+      <div className="relative mb-16 w-full overflow-hidden border-y border-slate-200/80 bg-[#e9edf3] py-2">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-[#e9edf3] to-transparent sm:w-28" />
 
         <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l from-[#e9edf3] to-transparent sm:w-28" />

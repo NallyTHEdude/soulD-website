@@ -107,7 +107,7 @@ export default function AwardsAndReviews() {
   return (
     <section
       id="our-work"
-      className="relative z-10 bg-[#f8f9fe] py-15 overflow-hidden"
+      className="relative z-10 bg-[#e9edf3] py-15 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-0 text-center">
         {/* Section Heading */}

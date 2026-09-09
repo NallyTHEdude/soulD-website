@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
-import { HERO_DATA } from "../../data";
 import { useNavigate } from "react-router-dom";
+import { HERO_DATA } from "../../data";
 
 interface HeroSectionProps {
   onOpenQuote: () => void;
@@ -36,7 +36,8 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
       <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
         {images.map((img, index) => {
           const isActive = index === activeIndex;
-          const zoomName = index+1 % 2 === 0 ? "kenburns-in" : "kenburns-out";
+          const zoomName =
+            index + (1 % 2) === 0 ? "kenburns-in" : "kenburns-out";
 
           return (
             <div
@@ -49,7 +50,7 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
               }}
             >
               <div
-                className={`w-full h-full bg-cover bg-center filter brightness-[0.85] contrast-[1.02] ${zoomName}`}
+                className={`w-full h-full bg-cover bg-center filter brightness-[0.9] contrast-[1.02] ${zoomName}`}
                 style={{
                   backgroundImage: `url('${img}')`,
                   animationDuration: `${ZOOM_DURATION}ms`,
@@ -66,11 +67,11 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
         })}
 
         {/* Lighter Indigo/Royal Blue Gradient Overlay */}
-        <div className="absolute inset-0 z-20 bg-linear-to-r from-[#1e1b4b]/80 via-[#2e2a72]/70 to-[#221c4a]/60" />
+        <div className="absolute inset-0 z-20 bg-linear-to-r from-[#1e1b4b]/90 via-[#2e2a72]/80 to-[#221c4a]/75" />
 
         {/* Geometric Diagonal Polygon Facets (Right Side Shapes) */}
         <div
-          className="absolute inset-0 z-20 pointer-events-none opacity-35 mix-blend-overlay"
+          className="absolute inset-0 z-20 pointer-events-none opacity-25 mix-blend-overlay"
           style={{
             clipPath: "polygon(75% 0, 100% 0, 100% 100%, 55% 100%)",
             background:
@@ -78,7 +79,7 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
           }}
         />
         <div
-          className="absolute inset-0 z-20 pointer-events-none opacity-45"
+          className="absolute inset-0 z-20 pointer-events-none opacity-40"
           style={{
             clipPath: "polygon(85% 0, 100% 0, 100% 100%, 68% 100%)",
             background:
@@ -107,7 +108,9 @@ export default function HeroSection({ onOpenQuote }: HeroSectionProps) {
       <div className="justify-center relative z-30 max-w-full mx-auto px-4 sm:px-6 lg:px-8 w-full pt-12 sm:pt-16">
         <div className="max-w-10xl mx-auto text-center ">
           <h1 className="text-[40px] sm:text-6xl lg:text-[76px] leading-tight sm:leading-[1.05] font-extrabold text-white tracking-tight mb-4 wrap-break-word">
-            Elevate Your Brand with Soul-D.
+            <span className="block sm:inline">Elevate</span>{" "}
+            <span className="block sm:inline">Your Brand</span>{" "}
+            <span className="block sm:inline">with Soul-D.</span>
           </h1>
           <h1 className="text-[40px] sm:text-5xl lg:text-[90px] leading-tight sm:leading-[1.08] text-white tracking-tight mb-4 wrap-break-word">
             The Best{" "}

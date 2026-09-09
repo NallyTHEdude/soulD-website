@@ -85,7 +85,7 @@ export default function InteractiveServices({
     >
       <div className="mx-auto max-w-[1650px] px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-4 pb-8 md:hidden">
-          {SERVICES_DATA.map((service) => (
+          {SERVICES_DATA.map((service, serviceIndex) => (
             <div
               key={service.id}
               onClick={() => navigate(`/services/${service.id}`)}
@@ -100,8 +100,8 @@ export default function InteractiveServices({
               <div className="absolute inset-0 bg-black/55" />
 
               <div className="relative flex min-h-70 flex-col justify-end p-5 text-white">
-                <span className="mb-2 text-xs font-extrabold uppercase tracking-[0.25em] text-[#0555F0]">
-                  Service
+                <span className="absolute left-5 top-4 text-5xl font-semibold leading-none text-[#0555F0]">
+                  {serviceIndex + 1}
                 </span>
 
                 <h3 className="max-w-[18rem] text-2xl font-bold leading-tight text-white">
@@ -184,7 +184,7 @@ export default function InteractiveServices({
                 }}
                 onTransitionEnd={handleTransitionEnd}
               >
-                {SERVICES_DATA.map((service) => (
+                {SERVICES_DATA.map((service, serviceIndex) => (
                   <div
                     key={service.id}
                     onClick={() => navigate(`/services/${service.id}`)}
@@ -206,8 +206,8 @@ export default function InteractiveServices({
 
                     {/* Content */}
                     <div className="absolute inset-0 flex flex-col justify-end p-8">
-                      <span className="mb-3 text-lg font-extrabold uppercase tracking-[0.25em] text-[#0555F0]">
-                        Service
+                      <span className="absolute left-8 top-6 text-7xl font-semibold leading-none text-[#0555F0]">
+                        {serviceIndex + 1}
                       </span>
 
                       <h3 className="max-w-55 text-3xl font-bold leading-tight text-white">

@@ -1,4 +1,5 @@
 import { Award, ShieldCheck, Star, CheckCircle, TrendingUp, Sparkles, Globe, ExternalLink } from 'lucide-react';
+import TrustedBySection from './TrustedBySection';
 
 export default function AwardsAndReviews() {
   const recognitions = [
@@ -104,62 +105,23 @@ export default function AwardsAndReviews() {
   const tickerItems = [...recognitions, ...recognitions];
 
   return (
-    <section id="our-work" className="relative z-10 bg-[#f8f9fe] py-15 overflow-hidden">
+    <section
+      id="our-work"
+      className="relative z-10 bg-[#f8f9fe] py-15 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-0 text-center">
-
         {/* Section Heading */}
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight font-['Plus_Jakarta_Sans'] mb-4">
           Trusted Industry Recognition
         </h2>
         <p className="text-slate-600 text-2xl sm:text-4xl max-w-10xl mx-auto leading-relaxed">
-          Certified by global tech platforms and top-rated by clients for delivering high performance, transparent pricing, and measurable growth.
+          Certified by global tech platforms and top-rated by clients for
+          delivering high performance, transparent pricing, and measurable
+          growth.
         </p>
       </div>
-
-      {/* Auto-Scrolling Horizontal Marquee Container */}
-      {/* <div className="relative w-full overflow-hidden py-4"> */}
-        {/* Gradient Overlay Mask for Smooth Fade Edges */}
-        {/* <div className="absolute top-0 bottom-0 left-0 w-16 sm:w-32 bg-gradient-to-r from-[#f8f9fe] to-transparent z-10 pointer-events-none" /> */}
-        {/* <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#f8f9fe] to-transparent z-10 pointer-events-none" /> */}
-
-        {/* Scrolling Strip */}
-        {/* <div className="animate-marquee flex gap-6 items-center">
-          {tickerItems.map((item, index) => (
-            <div
-              key={`${item.id}-${index}`}
-              className="flex-shrink-0 w-72 sm:w-80 bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:shadow-lg hover:border-indigo-300 transition-all duration-300 group cursor-default"
-            >
-              <div className="flex items-start justify-between mb-3">
-                <div className="flex items-center gap-3">
-                  {item.icon}
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-sm group-hover:text-indigo-600 transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-slate-500 font-medium">
-                      {item.subtitle}
-                    </p>
-                  </div>
-                </div>
-                <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-600 border border-indigo-100/80">
-                  {item.badge}
-                </span>
-              </div>
-
-              <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-                <span className="font-bold text-slate-800 flex items-center gap-1">
-                  <ShieldCheck className="w-3.5 h-3.5 text-indigo-600" />
-                  {item.metric}
-                </span>
-                <span className="text-indigo-600 font-semibold group-hover:translate-x-0.5 transition-transform">
-                  Verified ✓
-                </span>
-              </div>
-            </div>
-          ))}
-        </div> */}
-      {/* </div> */}
-
+      {/* Trusted Clients & Testimonials */}
+      <TrustedBySection />
     </section>
   );
 }
